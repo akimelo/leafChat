@@ -10,6 +10,7 @@
 		AD3644917375A381C5E1BC83 /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3F3E324E81D4BD2D2BDFF4 /* Pods_leafChat.framework */; };
 		D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */; };
 		D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */; };
+		D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1932B44423900A67C4E /* AuthHelper.swift */; };
 		D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92B72B42BFA6007916F5 /* AppDelegate.swift */; };
 		D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92B92B42BFA6007916F5 /* SceneDelegate.swift */; };
 		D29F92BC2B42BFA6007916F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92BB2B42BFA6007916F5 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		6B3F3E324E81D4BD2D2BDFF4 /* Pods_leafChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leafChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D242B1932B44423900A67C4E /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
 		D29F92B42B42BFA6007916F5 /* leafChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leafChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F92B72B42BFA6007916F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D29F92B92B42BFA6007916F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				D29F92C52B42BFA7007916F5 /* Info.plist */,
 				D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */,
 				D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */,
+				D242B1932B44423900A67C4E /* AuthHelper.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29F92BC2B42BFA6007916F5 /* ViewController.swift in Sources */,
+				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
 				D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */,
 				D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */,
 			);
