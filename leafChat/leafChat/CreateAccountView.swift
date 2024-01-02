@@ -20,6 +20,11 @@ class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UIN
         // Do any additional setup after loading the view.
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+    }
+    
+    @objc func hideKeyboard(){
+        view.endEditing(true)
     }
     
     @objc func onImage(){
@@ -37,9 +42,29 @@ class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UIN
     }
     
     @IBAction func onRegister(_ sender: Any) {
+        let name = nameField.text!
+        if name.count < 3 || name.count > 10 {
+            showError(message: "You can resister your name length 3 to 11.")
+        } else {
+            AuthHelper().createAccount(email: emailField.text!, password: passwordField.text!, result: {
+                success in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    self.showError(message: "Check your Valid e-mail,or check password that length is longer than 6 characters.")
+                }
+            })
+        }
+    }
+    
+    func showError(message:String){
+        let dialog = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(dialog, animated: true, completion: nil)
     }
     
     @IBAction func onBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
