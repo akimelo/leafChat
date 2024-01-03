@@ -78,6 +78,18 @@ class DatabaseHelper {
             }
         }
     }
+    
+    func getUserName(userID:String,result:@escaping(String) -> Void) {
+        db.collection("user").document(userID).getDocument(completion: {
+            (doc, error) in
+            if error == nil {
+                let data = doc?.data()
+                guard let name = data!["name"] as! String? else { return }
+                result(name)
+            }
+        })
+    }
+    
 }
 
 struct ChatRoom {
