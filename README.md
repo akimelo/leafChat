@@ -15,5 +15,5 @@
 - Here is OverView and Products used for creating leafChat App.
 
 <p align="center">
-    <img src="hhttps://github.com/akimelo/leafChat/assets/103817251/1b7bd921-cfbf-429f-afb3-564d837221d8" width="500px">
+    <img src="https://github.com/akimelo/leafChat/assets/103817251/1b7bd921-cfbf-429f-afb3-564d837221d8" width="500px">
 </p>
