@@ -7,11 +7,14 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
+//import SDWebImage
 
 class DatabaseHelper {
     
     let uid = AuthHelper().uid()
     let db = Firestore.firestore()
+    let storage = Storage.storage().reference()
     
     func getMyRoomList(result:@escaping([ChatRoom]) -> Void){
         var roomList:[ChatRoom] = []
@@ -50,6 +53,18 @@ class DatabaseHelper {
             }
         })
     }
+    
+    func resisterUserInfo(name:String,image:UIImage){
+        db.collection("user").document(uid).setData(["name":name])
+        let resized = image.resize(toWidth: 300)
+        guard let imageData = resized!.jpegData(compressionQuality:1) else { return }
+        storage.child("image/\(uid).jpeg").putData(imageData, metadata: nil)
+    }
+    
+//    func getImage(userID:String,imageView:UIImageView){
+//        let imageRef = storage.child("image/"+userID+".jpeg")
+//        imageView.sd_setImage(with: imageRef)
+//    }
 }
 
 struct ChatRoom {
