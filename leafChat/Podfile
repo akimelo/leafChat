@@ -10,5 +10,6 @@ target 'leafChat' do
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
   pod 'SDWebImage'
+  pod 'FirebaseUI'
 
 end
