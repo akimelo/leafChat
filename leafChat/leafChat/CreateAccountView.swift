@@ -49,6 +49,7 @@ class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UIN
             AuthHelper().createAccount(email: emailField.text!, password: passwordField.text!, result: {
                 success in
                 if success {
+                    DatabaseHelper().resisterUserInfo(name: self.nameField.text!, image: self.imageView.image!)
                     self.dismiss(animated: true, completion: nil)
                 } else {
                     self.showError(message: "Check your Valid e-mail,or check password that length is longer than 6 characters.")
