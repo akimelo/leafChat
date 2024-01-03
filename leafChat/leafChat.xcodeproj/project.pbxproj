@@ -14,6 +14,7 @@
 		D242B1962B44473700A67C4E /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1952B44473700A67C4E /* CreateAccountView.swift */; };
 		D242B1982B45517B00A67C4E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1972B45517B00A67C4E /* LoginView.swift */; };
 		D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1992B45625500A67C4E /* DatabaseHelper.swift */; };
+		D242B19C2B45822400A67C4E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B19B2B45822400A67C4E /* CustomView.swift */; };
 		D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92B72B42BFA6007916F5 /* AppDelegate.swift */; };
 		D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92B92B42BFA6007916F5 /* SceneDelegate.swift */; };
 		D29F92BC2B42BFA6007916F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F92BB2B42BFA6007916F5 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		D242B1952B44473700A67C4E /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		D242B1972B45517B00A67C4E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D242B1992B45625500A67C4E /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		D242B19B2B45822400A67C4E /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		D29F92B42B42BFA6007916F5 /* leafChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leafChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F92B72B42BFA6007916F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D29F92B92B42BFA6007916F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				D242B1952B44473700A67C4E /* CreateAccountView.swift */,
 				D242B1972B45517B00A67C4E /* LoginView.swift */,
 				D242B1992B45625500A67C4E /* DatabaseHelper.swift */,
+				D242B19B2B45822400A67C4E /* CustomView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D242B1982B45517B00A67C4E /* LoginView.swift in Sources */,
+				D242B19C2B45822400A67C4E /* CustomView.swift in Sources */,
 				D29F92BC2B42BFA6007916F5 /* ViewController.swift in Sources */,
 				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,
