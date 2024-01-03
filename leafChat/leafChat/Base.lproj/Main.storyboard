@@ -244,10 +244,62 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Friends" id="FdL-DY-aaz"/>
+                    <connections>
+                        <segue destination="gAu-Cw-e9v" kind="presentation" id="mxg-2d-vp5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTr-PM-jq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980.916030534351" y="685.91549295774655"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S65-UY-9uh">
+            <objects>
+                <viewController id="gAu-Cw-e9v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qld-sq-b0h">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa9-Lt-U11">
+                                <rect key="frame" x="159.66666666666666" y="375" width="110.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-Vt-37b">
+                                <rect key="frame" x="161.66666666666666" y="456" width="106.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Friend"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FR-j3-t6k">
+                                <rect key="frame" x="177" y="506" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-EE-OOC">
+                                <rect key="frame" x="115" y="161.66666666666663" width="200" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="VMI-d1-qDa"/>
+                                    <constraint firstAttribute="width" constant="200" id="gda-nC-MNz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EPL-Gc-TCO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pa9-Lt-U11" firstAttribute="top" secondItem="kBS-EE-OOC" secondAttribute="bottom" constant="15" id="16T-Cn-38N"/>
+                            <constraint firstItem="QqP-Vt-37b" firstAttribute="centerX" secondItem="qld-sq-b0h" secondAttribute="centerX" id="8Jt-uw-eS3"/>
+                            <constraint firstItem="pa9-Lt-U11" firstAttribute="centerX" secondItem="qld-sq-b0h" secondAttribute="centerX" id="9hu-Cr-0xi"/>
+                            <constraint firstItem="kBS-EE-OOC" firstAttribute="centerX" secondItem="qld-sq-b0h" secondAttribute="centerX" id="HjE-Ud-R5u"/>
+                            <constraint firstItem="kBS-EE-OOC" firstAttribute="top" secondItem="EPL-Gc-TCO" secondAttribute="top" constant="160" id="mRi-8K-WYV"/>
+                            <constraint firstItem="4FR-j3-t6k" firstAttribute="top" secondItem="QqP-Vt-37b" secondAttribute="bottom" constant="15" id="qXT-J3-had"/>
+                            <constraint firstItem="QqP-Vt-37b" firstAttribute="top" secondItem="pa9-Lt-U11" secondAttribute="bottom" constant="60" id="uYZ-0S-UY0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ci4-to-37G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2731" y="686"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6ac-DR-w2q">
@@ -391,6 +443,7 @@
     </scenes>
     <resources>
         <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
+        <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
