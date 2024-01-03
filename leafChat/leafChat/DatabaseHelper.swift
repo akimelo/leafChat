@@ -9,6 +9,9 @@ import Foundation
 import FirebaseFirestore
 import FirebaseStorage
 import SDWebImage
+import FirebaseAuthUI
+import FirebaseStorageUI
+import FirebaseDatabaseUI
 
 class DatabaseHelper {
     
@@ -61,10 +64,20 @@ class DatabaseHelper {
         storage.child("image/\(uid).jpeg").putData(imageData, metadata: nil)
     }
     
-//    func getImage(userID:String,imageView:UIImageView){
-//        let imageRef = storage.child("image/"+userID+".jpeg")
-//        imageView.sd_setImage(with: imageRef)
-//    }
+    func getImage(userID:String,imageView:UIImageView){
+        let imageRef = storage.child("image/"+userID+".jpeg")
+        
+        // ダウンロードURLを取得
+        imageRef.downloadURL { url, error in
+            if let error = error {
+                // エラーが発生した場合はここで処理
+                print(error)
+            } else if let url = url {
+                // UIImageViewに画像をセット
+                imageView.sd_setImage(with: url)
+            }
+        }
+    }
 }
 
 struct ChatRoom {
