@@ -1,7 +1,7 @@
 # leafChat
 
 <p align="center">
-    <img src="https://github.com/akimelo/leafChat/assets/103817251/a83d4a5e-1700-456d-919e-67f11e0c0900" width="140px">
+    <img src="https://github.com/akimelo/leafChat/assets/103817251/0625dc2c-d346-4934-b3da-6477afcb6f07" width="140px">
 </p>
 
 - This is Chat App(iOS) using FireBase.
@@ -11,3 +11,9 @@
     - Add Friends.
     - Chat with Friends Real-time.
     - Security Settings
+
+- Here is OverView and Products used for creating leafChat App.
+
+<p align="center">
+    <img src="hhttps://github.com/akimelo/leafChat/assets/103817251/1b7bd921-cfbf-429f-afb3-564d837221d8" width="500px">
+</p>
