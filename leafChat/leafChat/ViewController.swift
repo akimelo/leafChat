@@ -7,8 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var dataHelper = DatabaseHelper()
+    var roomList:[ChatRoom] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,6 +23,12 @@ class ViewController: UIViewController {
         } else {
             print(uid)
             //チャットリストを表示する処理
+            dataHelper.getMyRoomList(result: {
+                result in
+                print(result)
+                self.roomList = result
+                self.tableView.reloadData()
+            })
         }
     }
 
@@ -25,5 +36,32 @@ class ViewController: UIViewController {
         AuthHelper().signout()
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection")
+        print(roomList.count)
+        return roomList.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("heightForRowAt")
+        return 80.0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellData = roomList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let imageView = cell?.viewWithTag(1) as! UIImageView
+        imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
+        imageView.clipsToBounds = true
+        print("userID:" + cellData.userID)
+        dataHelper.getImage(userID: cellData.userID, imageView: imageView)
+        let nameLabel = cell?.viewWithTag(2) as! UILabel
+        dataHelper.getUserName(userID: cellData.userID, result: {
+            name in
+            nameLabel.text = name
+            print("name:" + name)
+        })
+        return cell!
+    }
 }
 
