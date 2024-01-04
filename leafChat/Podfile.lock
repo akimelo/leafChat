@@ -701,6 +701,9 @@ PODS:
     - FirebaseCore (~> 10.0)
     - FirebaseCoreExtension (~> 10.0)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
+  - FirebaseStorageUI (13.1.0):
+    - FirebaseStorage (< 11.0, >= 8.0)
+    - SDWebImage (~> 5.6)
   - FirebaseUI (2.0.0):
     - FirebaseUI/All (= 2.0.0)
   - FirebaseUI/All (2.0.0):
@@ -837,6 +840,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
   - FirebaseStorage
+  - FirebaseStorageUI
   - FirebaseUI
   - SDWebImage
 
@@ -860,6 +864,7 @@ SPEC REPOS:
     - FirebaseFirestoreInternal
     - FirebaseSharedSwift
     - FirebaseStorage
+    - FirebaseStorageUI
     - FirebaseUI
     - GoogleAppUtilities
     - GoogleAuthUtilities
@@ -897,6 +902,7 @@ SPEC CHECKSUMS:
   FirebaseFirestoreInternal: a15405fb607dfd14edd568bba77028f4c7a69688
   FirebaseSharedSwift: f34eeb7d3ea87a34497629b6ca41657beadef76a
   FirebaseStorage: 1e0b9c9c18fb73ee3c5728a370c0e7355f8e88e3
+  FirebaseStorageUI: 5db14fc4c251fdbe3b706eb1a9dddc55bc51b414
   FirebaseUI: beda8ada3b190e960e25713266eda0b4776e7a97
   GoogleAppUtilities: a8a552aa74f6597f805e45b5a3962766c3134973
   GoogleAuthUtilities: ccad2e0a9284699973ff57c0dd24c3893657fda4
@@ -915,6 +921,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 3b6044a7320340326a4098f3e37aa1dbaeb94942
 
-PODFILE CHECKSUM: c6a322365a7fcc6c1969b70252b6b03e1e818094
+PODFILE CHECKSUM: 16234839590b6421ebc5682865c4b76322d0b99c
 
 COCOAPODS: 1.13.0
