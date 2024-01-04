@@ -12,5 +12,6 @@ target 'leafChat' do
   pod 'SDWebImage'
   pod 'FirebaseUI'
   pod 'FirebaseStorageUI'
+  pod 'GoogleUtilities'
 
 end
