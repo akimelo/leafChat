@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MXx-0f-jus">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a4R-jF-twF">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iED-9K-7Tk">
-                                <rect key="frame" x="57.666666666666657" y="745" width="315" height="45"/>
+                                <rect key="frame" x="57.666666666666657" y="779" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="mOk-A3-CiT"/>
                                     <constraint firstAttribute="width" constant="315" id="pNb-C6-4Id"/>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQs-GJ-eJT">
-                                <rect key="frame" x="143.66666666666666" y="798" width="142.99999999999997" height="35"/>
+                                <rect key="frame" x="143.66666666666666" y="832" width="142.99999999999997" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                                 <connections>
@@ -165,13 +165,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="Vv9-N4-0TM">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="aPj-2K-xMc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="aPj-2K-xMc">
+                            <connections>
+                                <action selector="onLogOut:" destination="BYZ-38-t0r" id="8t1-0b-gFd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="N8e-8Q-CaW">
                             <connections>
                                 <segue destination="jSv-LZ-hic" kind="show" id="Gk4-Rx-oD7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MXx-0f-jus" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="7jm-EL-OSS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
