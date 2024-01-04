@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD3644917375A381C5E1BC83 /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3F3E324E81D4BD2D2BDFF4 /* Pods_leafChat.framework */; };
+		480F403C91F07A6E936C963C /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */; };
 		D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */; };
 		D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */; };
 		D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1932B44423900A67C4E /* AuthHelper.swift */; };
@@ -24,9 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EA00BC0ED73D432127767C9 /* Pods-leafChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.release.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.release.xcconfig"; sourceTree = "<group>"; };
-		248115D4576F09AF066FFC5C /* Pods-leafChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.debug.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.debug.xcconfig"; sourceTree = "<group>"; };
-		6B3F3E324E81D4BD2D2BDFF4 /* Pods_leafChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leafChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leafChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF75878BA514366AF19BADF /* Pods-leafChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.debug.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.release.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.release.xcconfig"; sourceTree = "<group>"; };
 		D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1932B44423900A67C4E /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
@@ -49,28 +49,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3644917375A381C5E1BC83 /* Pods_leafChat.framework in Frameworks */,
+				480F403C91F07A6E936C963C /* Pods_leafChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		637E3F26564989BC5CDEF7CD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6B3F3E324E81D4BD2D2BDFF4 /* Pods_leafChat.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D29F92AB2B42BFA6007916F5 = {
 			isa = PBXGroup;
 			children = (
 				D29F92B62B42BFA6007916F5 /* leafChat */,
 				D29F92B52B42BFA6007916F5 /* Products */,
 				E489C61D57AD830CC4E026A7 /* Pods */,
-				637E3F26564989BC5CDEF7CD /* Frameworks */,
+				F60B393FA0EE63C5A2513556 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,10 +98,18 @@
 		E489C61D57AD830CC4E026A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				248115D4576F09AF066FFC5C /* Pods-leafChat.debug.xcconfig */,
-				0EA00BC0ED73D432127767C9 /* Pods-leafChat.release.xcconfig */,
+				CAF75878BA514366AF19BADF /* Pods-leafChat.debug.xcconfig */,
+				CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F60B393FA0EE63C5A2513556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,12 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D29F92C82B42BFA7007916F5 /* Build configuration list for PBXNativeTarget "leafChat" */;
 			buildPhases = (
-				92638C82C1926CED8E06D9D8 /* [CP] Check Pods Manifest.lock */,
+				8D5A2A06F8456999EE99C08C /* [CP] Check Pods Manifest.lock */,
 				D29F92B02B42BFA6007916F5 /* Sources */,
 				D29F92B12B42BFA6007916F5 /* Frameworks */,
 				D29F92B22B42BFA6007916F5 /* Resources */,
-				FD62E434DD1A846403B1E797 /* [CP] Embed Pods Frameworks */,
-				27A4DECFD0BA331332F4C163 /* [CP] Copy Pods Resources */,
+				0A740A1FE26D34863DD703EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,24 +183,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27A4DECFD0BA331332F4C163 /* [CP] Copy Pods Resources */ = {
+		0A740A1FE26D34863DD703EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92638C82C1926CED8E06D9D8 /* [CP] Check Pods Manifest.lock */ = {
+		8D5A2A06F8456999EE99C08C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,23 +220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD62E434DD1A846403B1E797 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,7 +384,7 @@
 		};
 		D29F92C92B42BFA7007916F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 248115D4576F09AF066FFC5C /* Pods-leafChat.debug.xcconfig */;
+			baseConfigurationReference = CAF75878BA514366AF19BADF /* Pods-leafChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -431,7 +413,7 @@
 		};
 		D29F92CA2B42BFA7007916F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EA00BC0ED73D432127767C9 /* Pods-leafChat.release.xcconfig */;
+			baseConfigurationReference = CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
