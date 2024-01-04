@@ -65,18 +65,9 @@ class DatabaseHelper {
     }
     
     func getImage(userID:String,imageView:UIImageView){
-        let imageRef = storage.child("image/"+userID+".jpeg")
-        
-        // ダウンロードURLを取得
-        imageRef.downloadURL { url, error in
-            if let error = error {
-                // エラーが発生した場合はここで処理
-                print(error)
-            } else if let url = url {
-                // UIImageViewに画像をセット
-                imageView.sd_setImage(with: url)
-            }
-        }
+      let imageRef = storage.child("image/"+userID+".jpeg")
+      //画像を読み込み、imageViewに表示
+      imageView.sd_setImage(with: imageRef)
     }
     
     func getUserName(userID:String,result:@escaping(String) -> Void) {
