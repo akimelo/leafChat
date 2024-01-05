@@ -56,6 +56,13 @@ class AddFriendView: UIViewController {
             vc.userID = data.id
             vc.name = data.name
         }
+        if segue.identifier == "qr"{
+            let vc = segue.destination as! QRScanner
+            vc.qrScaned = {
+                id in
+                self.conform(id: id)
+            }
+        }
     }
     
     func showError(message:String){

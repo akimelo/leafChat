@@ -189,6 +189,46 @@
             </objects>
             <point key="canvasLocation" x="1980.916030534351" y="3.5211267605633805"/>
         </scene>
+        <!--Scanner-->
+        <scene sceneID="9ld-Wz-PoJ">
+            <objects>
+                <viewController id="ioX-hg-txx" customClass="QRScanner" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DuS-9G-Jgo">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IQ-FF-s7F">
+                                <rect key="frame" x="30" y="30" width="35" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="2BZ-KL-LBe"/>
+                                    <constraint firstAttribute="height" constant="35" id="wi6-mu-BDe"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBack:" destination="ioX-hg-txx" eventType="touchUpInside" id="CXF-5e-XjN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eCR-Ka-HTr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1IQ-FF-s7F" firstAttribute="top" secondItem="eCR-Ka-HTr" secondAttribute="top" constant="30" id="T9K-Wj-N0I"/>
+                            <constraint firstItem="1IQ-FF-s7F" firstAttribute="leading" secondItem="eCR-Ka-HTr" secondAttribute="leading" constant="30" id="w2i-ut-rFo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="1IQ-FF-s7F" id="5Lr-Vq-1aW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqB-OG-WZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162.3255813953488" y="685.62231759656652"/>
+        </scene>
         <!--Add Friends-->
         <scene sceneID="pYz-Mo-om8">
             <objects>
@@ -222,6 +262,9 @@
                                 <rect key="frame" x="115.66666666666669" y="271" width="199" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Snap Friend's QR code"/>
+                                <connections>
+                                    <segue destination="ioX-hg-txx" kind="presentation" id="RYu-Ov-MTb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJo-6h-SU3">
                                 <rect key="frame" x="271" y="378" width="64" height="35"/>
@@ -473,6 +516,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
         <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
