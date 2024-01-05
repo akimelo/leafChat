@@ -183,11 +183,112 @@
                     <connections>
                         <outlet property="tableView" destination="9zh-WG-BTF" id="vfv-GB-0nP"/>
                         <segue destination="MXx-0f-jus" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="7jm-EL-OSS"/>
+                        <segue destination="5EE-Et-XmF" kind="show" identifier="chat" id="ew0-FG-9lZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980.916030534351" y="3.5211267605633805"/>
+        </scene>
+        <!--Chat View-->
+        <scene sceneID="O7D-Sy-fJT">
+            <objects>
+                <viewController id="5EE-Et-XmF" customClass="ChatView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d90-OI-gwk">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FDt-Wd-OFS">
+                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="U2T-8l-SzI">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2T-8l-SzI" id="jSc-11-TCx">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KnT-w5-E5Y">
+                                                    <rect key="frame" x="5" y="38" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="1Vu-wE-rx1"/>
+                                                        <constraint firstAttribute="width" constant="40" id="NUm-M4-MYJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERS-M9-d41" customClass="InsetLabel" customModule="leafChat" customModuleProvider="target">
+                                                    <rect key="frame" x="53" y="38" width="39" height="40"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="42v-jm-2DT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KnT-w5-E5Y" firstAttribute="centerY" secondItem="jSc-11-TCx" secondAttribute="centerY" id="2fj-EQ-lEf"/>
+                                                <constraint firstItem="ERS-M9-d41" firstAttribute="leading" secondItem="KnT-w5-E5Y" secondAttribute="trailing" constant="8" id="Deg-Ac-Xgj"/>
+                                                <constraint firstItem="KnT-w5-E5Y" firstAttribute="leading" secondItem="jSc-11-TCx" secondAttribute="leading" constant="5" id="Rfz-6y-Jyn"/>
+                                                <constraint firstItem="ERS-M9-d41" firstAttribute="centerY" secondItem="jSc-11-TCx" secondAttribute="centerY" id="Z28-oa-p1Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="69" id="JNP-2G-3ok">
+                                        <rect key="frame" x="0.0" y="166" width="430" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JNP-2G-3ok" id="Ora-MU-5KI">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-wx-5Kp">
+                                                    <rect key="frame" x="385" y="14.666666666666664" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="5mt-JP-gNe"/>
+                                                        <constraint firstAttribute="height" constant="40" id="bab-IB-5fw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI8-TQ-gxH" customClass="InsetLabel" customModule="leafChat" customModuleProvider="target">
+                                                    <rect key="frame" x="338" y="14.666666666666664" width="39" height="40"/>
+                                                    <color key="backgroundColor" red="0.18437118299999999" green="0.409537965" blue="0.39803012049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="0x7-55-G02"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LsR-wx-5Kp" firstAttribute="centerY" secondItem="Ora-MU-5KI" secondAttribute="centerY" id="YGq-Tj-5l8"/>
+                                                <constraint firstItem="rI8-TQ-gxH" firstAttribute="centerY" secondItem="Ora-MU-5KI" secondAttribute="centerY" id="ao5-uo-vtB"/>
+                                                <constraint firstItem="LsR-wx-5Kp" firstAttribute="leading" secondItem="rI8-TQ-gxH" secondAttribute="trailing" constant="8" id="i3R-L2-7Iu"/>
+                                                <constraint firstAttribute="trailing" secondItem="LsR-wx-5Kp" secondAttribute="trailing" constant="5" id="tmH-8o-83R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5EE-Et-XmF" id="SPM-VO-LCw"/>
+                                    <outlet property="delegate" destination="5EE-Et-XmF" id="PAT-zJ-WkC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wAH-5n-3Yh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wAH-5n-3Yh" firstAttribute="bottom" secondItem="FDt-Wd-OFS" secondAttribute="bottom" id="IAI-lc-ehR"/>
+                            <constraint firstItem="FDt-Wd-OFS" firstAttribute="top" secondItem="wAH-5n-3Yh" secondAttribute="top" id="QJf-Bd-Yq1"/>
+                            <constraint firstItem="FDt-Wd-OFS" firstAttribute="trailing" secondItem="wAH-5n-3Yh" secondAttribute="trailing" id="R4l-sJ-THM"/>
+                            <constraint firstItem="FDt-Wd-OFS" firstAttribute="leading" secondItem="wAH-5n-3Yh" secondAttribute="leading" id="ebV-Yu-fB5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0md-iv-gkD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63F-UU-V1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2817.2093023255816" y="3.8626609442060089"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="9ld-Wz-PoJ">
@@ -526,6 +627,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

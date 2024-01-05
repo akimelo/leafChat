@@ -10,6 +10,7 @@
 		480F403C91F07A6E936C963C /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */; };
 		D22C0C5B2B47DE9A00D805AA /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */; };
 		D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5C2B47F04300D805AA /* QRScanner.swift */; };
+		D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5E2B4813CF00D805AA /* ChatView.swift */; };
 		D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */; };
 		D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */; };
 		D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1932B44423900A67C4E /* AuthHelper.swift */; };
@@ -31,6 +32,7 @@
 		CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.release.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.release.xcconfig"; sourceTree = "<group>"; };
 		D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		D22C0C5C2B47F04300D805AA /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
+		D22C0C5E2B4813CF00D805AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1932B44423900A67C4E /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				D242B19B2B45822400A67C4E /* CustomView.swift */,
 				D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */,
 				D22C0C5C2B47F04300D805AA /* QRScanner.swift */,
+				D22C0C5E2B4813CF00D805AA /* ChatView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				D242B1982B45517B00A67C4E /* LoginView.swift in Sources */,
 				D242B19C2B45822400A67C4E /* CustomView.swift in Sources */,
 				D29F92BC2B42BFA6007916F5 /* ViewController.swift in Sources */,
+				D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */,
 				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,
 				D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */,
