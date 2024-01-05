@@ -95,6 +95,10 @@ class DatabaseHelper {
         })
     }
     
+    func createRoom(userID:String){
+        db.collection("room").addDocument(data: ["user":[userID,uid]])
+    }
+    
 }
 
 struct ChatRoom {
