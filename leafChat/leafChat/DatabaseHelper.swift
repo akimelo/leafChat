@@ -65,7 +65,7 @@ class DatabaseHelper {
     }
     
     func getImage(userID:String,imageView:UIImageView){
-      let imageRef = storage.child("image/"+userID+".jpg")
+      let imageRef = storage.child("image/"+userID+".jpeg")
       print(imageRef)
         
       imageRef.downloadURL { url, error in

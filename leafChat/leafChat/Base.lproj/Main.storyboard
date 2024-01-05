@@ -130,8 +130,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChatlogo" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-cZ-a1w">
-                                                    <rect key="frame" x="20" y="12" width="70" height="70"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.badge.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-cZ-a1w">
+                                                    <rect key="frame" x="17.333333333333336" y="12.666666666666664" width="72.666666666666657" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="MY6-Is-ndx"/>
                                                         <constraint firstAttribute="height" constant="70" id="tAf-Yl-FJI"/>
@@ -155,7 +155,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="roe-KS-FMp"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="La0-vZ-jVz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Myk-sq-RIw"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -455,6 +455,7 @@
     </scenes>
     <resources>
         <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
+        <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
