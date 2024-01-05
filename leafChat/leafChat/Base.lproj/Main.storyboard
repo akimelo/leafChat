@@ -192,7 +192,7 @@
         <!--Add Friends-->
         <scene sceneID="pYz-Mo-om8">
             <objects>
-                <viewController id="jSv-LZ-hic" sceneMemberID="viewController">
+                <viewController id="jSv-LZ-hic" customClass="AddFriendView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="00n-6f-f6A">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,11 +227,17 @@
                                 <rect key="frame" x="271" y="378" width="64" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Copy"/>
+                                <connections>
+                                    <action selector="onCopy:" destination="jSv-LZ-hic" eventType="touchUpInside" id="boI-cT-j4E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-74-IfN">
                                 <rect key="frame" x="324" y="171" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Search"/>
+                                <connections>
+                                    <action selector="onSearch:" destination="jSv-LZ-hic" eventType="touchUpInside" id="TLx-SS-3tY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MyID: xxxyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMB-wb-0RX">
                                 <rect key="frame" x="95" y="387" width="101" height="21"/>
@@ -257,6 +263,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Friends" id="FdL-DY-aaz"/>
                     <connections>
+                        <outlet property="idField" destination="UwC-fy-CsR" id="VPY-qt-6Wa"/>
+                        <outlet property="idLabel" destination="OMB-wb-0RX" id="eI5-Iu-LEF"/>
+                        <outlet property="qrView" destination="dZK-Pw-iRV" id="Jws-e6-qg9"/>
                         <segue destination="gAu-Cw-e9v" kind="presentation" id="mxg-2d-vp5"/>
                     </connections>
                 </viewController>
@@ -264,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1980.916030534351" y="685.91549295774655"/>
         </scene>
-        <!--View Controller-->
+        <!--Conform View-->
         <scene sceneID="S65-UY-9uh">
             <objects>
-                <viewController id="gAu-Cw-e9v" sceneMemberID="viewController">
+                <viewController id="gAu-Cw-e9v" customClass="ConformView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qld-sq-b0h">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,11 +291,17 @@
                                 <rect key="frame" x="161.66666666666666" y="456" width="106.99999999999997" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Friend"/>
+                                <connections>
+                                    <action selector="onAdd:" destination="gAu-Cw-e9v" eventType="touchUpInside" id="Ign-MT-9OS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FR-j3-t6k">
                                 <rect key="frame" x="177" y="506" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="gAu-Cw-e9v" eventType="touchUpInside" id="JrZ-Fr-Xo6"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-EE-OOC">
                                 <rect key="frame" x="115" y="161.66666666666663" width="200" height="197"/>
@@ -308,6 +323,10 @@
                             <constraint firstItem="QqP-Vt-37b" firstAttribute="top" secondItem="pa9-Lt-U11" secondAttribute="bottom" constant="60" id="uYZ-0S-UY0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="kBS-EE-OOC" id="owu-lE-bxT"/>
+                        <outlet property="nameLabel" destination="pa9-Lt-U11" id="ub9-4e-z6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci4-to-37G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
