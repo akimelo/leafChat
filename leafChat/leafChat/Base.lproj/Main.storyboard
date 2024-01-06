@@ -535,8 +535,8 @@
                                     <action selector="onAdd:" destination="gAu-Cw-e9v" eventType="touchUpInside" id="Ign-MT-9OS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FR-j3-t6k">
-                                <rect key="frame" x="177" y="506" width="77" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FR-j3-t6k">
+                                <rect key="frame" x="176.66666666666666" y="506" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                 <connections>
@@ -561,6 +561,7 @@
                             <constraint firstItem="kBS-EE-OOC" firstAttribute="top" secondItem="EPL-Gc-TCO" secondAttribute="top" constant="160" id="mRi-8K-WYV"/>
                             <constraint firstItem="4FR-j3-t6k" firstAttribute="top" secondItem="QqP-Vt-37b" secondAttribute="bottom" constant="15" id="qXT-J3-had"/>
                             <constraint firstItem="QqP-Vt-37b" firstAttribute="top" secondItem="pa9-Lt-U11" secondAttribute="bottom" constant="60" id="uYZ-0S-UY0"/>
+                            <constraint firstItem="4FR-j3-t6k" firstAttribute="centerX" secondItem="qld-sq-b0h" secondAttribute="centerX" id="yfs-CU-4Av"/>
                         </constraints>
                     </view>
                     <connections>
