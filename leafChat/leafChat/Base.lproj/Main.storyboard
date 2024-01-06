@@ -151,8 +151,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="2Rv-GG-1zf">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="MdD-T0-wV3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="MdD-T0-wV3">
+                            <connections>
+                                <action selector="onLogOut:" destination="LSm-cI-YEC" id="0DZ-uF-rtf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MXx-0f-jus" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="wFm-BP-BMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2E-Ad-cvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -666,6 +673,9 @@
             <point key="canvasLocation" x="2817" y="-733"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wFm-BP-BMa"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
