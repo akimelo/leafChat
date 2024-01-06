@@ -31,6 +31,44 @@ class InsetLabel: UILabel {
     }
 }
 
+class InputView :UIView {
+    @IBOutlet weak var chatTextField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    var delegate:InputViewDelegate!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setFromXib()
+        autoresizingMask = .flexibleHeight
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @IBAction func onSend(_ sender: Any) {
+        delegate.sendTapped(text: chatTextField.text!)
+        chatTextField.text = ""
+    }
+    
+    func setFromXib() {
+        let nib = UINib.init(nibName: "InputView", bundle: nil)
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.addSubview(view)
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return .zero
+    }
+}
+
+protocol InputViewDelegate: AnyObject {
+    func sendTapped(text: String)
+}
+
 extension UIImage {
     func resize(toWidth width: CGFloat) -> UIImage? {
         let resizedSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
