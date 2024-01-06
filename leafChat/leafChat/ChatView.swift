@@ -7,13 +7,32 @@
 
 import UIKit
 
-class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource, InputViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     let database = DatabaseHelper()
     var roomData:ChatRoom!
     var chatData:[ChatText] = []
+    
+    private lazy var bottomInputView: InputView = {
+        let view = InputView()
+        view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)
+        view.delegate = self
+        return view
+    }()
+    
+    func sendTapped(text: String) {
+        database.sendChatMessage(roomID: roomData.roomID, text: text)
+    }
+    
+    override var inputAccessoryView: UIView? {
+        return bottomInputView
+    }
+
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +47,35 @@ class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.chatData = result
             self.messageUpdated()
         })
+        
+        tableView.keyboardDismissMode = .interactive
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification){
+        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardHeight = keyboardFrame.cgRectValue.height
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            scrollToBottom()
+        }
+    }
+    
+    func scrollToBottom(){
+        let rowNum = tableView.numberOfRows(inSection: 0)
+        if rowNum != 0 {
+            tableView.scrollToRow(at: IndexPath(row: rowNum-1, section: 0), at: .bottom, animated: true)
+        }
+    }
+
+    @objc func keyboardWillHide(){
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
     }
     
     func messageUpdated(){
         tableView.reloadData()
+        scrollToBottom()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
