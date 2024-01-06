@@ -108,6 +108,7 @@ class ConformView :UIViewController {
     }
     
     @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
