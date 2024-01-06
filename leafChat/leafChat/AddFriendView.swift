@@ -25,7 +25,7 @@ class AddFriendView: UIViewController {
     }
     
     @IBAction func onSearch(_ sender: Any) {
-        
+        conform(id: idField.text!)
     }
     
     @IBAction func onCopy(_ sender: Any) {
