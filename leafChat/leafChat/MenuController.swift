@@ -13,6 +13,12 @@ class MenuController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let uid = AuthHelper().uid()
+        if uid == "" {
+            performSegue(withIdentifier: "login", sender: nil)
+        } else {
+            print(uid)
+        }
     }
     
     @IBAction func onLogOut(_ sender: Any) {

@@ -26,6 +26,7 @@
 		D29F92C42B42BFA7007916F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29F92C22B42BFA7007916F5 /* LaunchScreen.storyboard */; };
 		D2F76FE12B49212A00CC09E6 /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F76FE02B49212A00CC09E6 /* InputView.xib */; };
 		D2F76FE32B4965A100CC09E6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F76FE22B4965A100CC09E6 /* MenuController.swift */; };
+		D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		D29F92C52B42BFA7007916F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F76FE02B49212A00CC09E6 /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
 		D2F76FE22B4965A100CC09E6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D22C0C5E2B4813CF00D805AA /* ChatView.swift */,
 				D2F76FE02B49212A00CC09E6 /* InputView.xib */,
 				D2F76FE22B4965A100CC09E6 /* MenuController.swift */,
+				D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */,
 				D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */,
 				D242B1962B44473700A67C4E /* CreateAccountView.swift in Sources */,
+				D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */,
 				D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
