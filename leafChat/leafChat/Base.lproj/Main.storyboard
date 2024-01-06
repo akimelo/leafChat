@@ -126,7 +126,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.18437118299999999" green="0.409537965" blue="0.39803012049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Chat with Friends"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Chat with Friends🍃"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Tn0-TR-T59"/>
                                 </connections>
@@ -135,7 +135,7 @@
                                 <rect key="frame" x="220" y="141" width="190" height="65"/>
                                 <color key="tintColor" red="0.18437118299999999" green="0.409537965" blue="0.39803012049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Chat with AI"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Chat with AI🌳"/>
                                 <connections>
                                     <segue destination="tn3-Bl-jf6" kind="show" id="VwC-cM-ABl"/>
                                 </connections>
@@ -444,8 +444,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZK-Pw-iRV">
-                                <rect key="frame" x="95" y="416" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZK-Pw-iRV">
+                                <rect key="frame" x="95" y="428" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="56X-m6-rrk"/>
                                     <constraint firstAttribute="width" constant="240" id="RFV-cA-RLN"/>
@@ -459,41 +459,45 @@
                                     <segue destination="ioX-hg-txx" kind="presentation" id="RYu-Ov-MTb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJo-6h-SU3">
-                                <rect key="frame" x="271" y="378" width="64" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Copy"/>
-                                <connections>
-                                    <action selector="onCopy:" destination="jSv-LZ-hic" eventType="touchUpInside" id="boI-cT-j4E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-74-IfN">
-                                <rect key="frame" x="324" y="171" width="78" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-74-IfN">
+                                <rect key="frame" x="324" y="171.66666666666666" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Search"/>
                                 <connections>
                                     <action selector="onSearch:" destination="jSv-LZ-hic" eventType="touchUpInside" id="TLx-SS-3tY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MyID: xxxyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMB-wb-0RX">
-                                <rect key="frame" x="95" y="387" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyID: xxxyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMB-wb-0RX">
+                                <rect key="frame" x="172.66666666666666" y="678" width="84.999999999999972" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJo-6h-SU3">
+                                <rect key="frame" x="183" y="707" width="64" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Copy"/>
+                                <connections>
+                                    <action selector="onCopy:" destination="jSv-LZ-hic" eventType="touchUpInside" id="boI-cT-j4E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ddi-Cu-TgU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ddi-Cu-TgU" firstAttribute="trailing" secondItem="YTp-74-IfN" secondAttribute="trailing" constant="28" id="7PS-aK-XjI"/>
                             <constraint firstItem="QpQ-bK-ddW" firstAttribute="top" secondItem="ddi-Cu-TgU" secondAttribute="top" constant="38" id="ACY-9I-uhz"/>
+                            <constraint firstItem="AJo-6h-SU3" firstAttribute="top" secondItem="dZK-Pw-iRV" secondAttribute="bottom" constant="25" id="Jz6-px-wao"/>
                             <constraint firstItem="QpQ-bK-ddW" firstAttribute="leading" secondItem="ddi-Cu-TgU" secondAttribute="leading" constant="28" id="KpC-bb-CeG"/>
-                            <constraint firstItem="dZK-Pw-iRV" firstAttribute="top" secondItem="OMB-wb-0RX" secondAttribute="bottom" constant="10" id="YI0-ja-nn6"/>
+                            <constraint firstItem="OMB-wb-0RX" firstAttribute="top" secondItem="dZK-Pw-iRV" secondAttribute="bottom" constant="10" id="T6U-qZ-kQV"/>
                             <constraint firstItem="dZK-Pw-iRV" firstAttribute="centerX" secondItem="00n-6f-f6A" secondAttribute="centerX" id="YiZ-JM-fhs"/>
                             <constraint firstItem="GrC-5Q-3sq" firstAttribute="top" secondItem="UwC-fy-CsR" secondAttribute="bottom" constant="65" id="d6E-ww-Swb"/>
+                            <constraint firstItem="ddi-Cu-TgU" firstAttribute="bottom" secondItem="dZK-Pw-iRV" secondAttribute="bottom" constant="230" id="guj-BP-AAZ"/>
                             <constraint firstItem="UwC-fy-CsR" firstAttribute="leading" secondItem="ddi-Cu-TgU" secondAttribute="leading" constant="28" id="hju-IN-KdG"/>
-                            <constraint firstItem="AJo-6h-SU3" firstAttribute="top" secondItem="GrC-5Q-3sq" secondAttribute="bottom" constant="65" id="m2h-4S-b31"/>
+                            <constraint firstItem="YTp-74-IfN" firstAttribute="centerY" secondItem="UwC-fy-CsR" secondAttribute="centerY" id="lBG-WJ-x6W"/>
                             <constraint firstItem="UwC-fy-CsR" firstAttribute="top" secondItem="QpQ-bK-ddW" secondAttribute="bottom" constant="10" id="nK2-nf-9IJ"/>
+                            <constraint firstItem="AJo-6h-SU3" firstAttribute="centerX" secondItem="00n-6f-f6A" secondAttribute="centerX" id="oUD-6l-b2r"/>
+                            <constraint firstItem="OMB-wb-0RX" firstAttribute="centerX" secondItem="dZK-Pw-iRV" secondAttribute="centerX" id="sGI-oA-dPr"/>
                             <constraint firstItem="GrC-5Q-3sq" firstAttribute="centerX" secondItem="00n-6f-f6A" secondAttribute="centerX" id="vhx-So-P0S"/>
                         </constraints>
                     </view>
