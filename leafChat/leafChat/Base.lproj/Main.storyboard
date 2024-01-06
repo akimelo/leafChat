@@ -136,6 +136,9 @@
                                 <color key="tintColor" red="0.18437118299999999" green="0.409537965" blue="0.39803012049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Chat with AI"/>
+                                <connections>
+                                    <segue destination="tn3-Bl-jf6" kind="show" id="VwC-cM-ABl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="THV-c4-RF8"/>
@@ -163,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2E-Ad-cvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026.9767441860465" y="2.5751072961373391"/>
+            <point key="canvasLocation" x="105" y="4"/>
         </scene>
         <!--Chat-->
         <scene sceneID="tne-QT-ifu">
@@ -223,11 +226,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="Vv9-N4-0TM">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="aPj-2K-xMc">
-                            <connections>
-                                <action selector="onLogOut:" destination="BYZ-38-t0r" id="8t1-0b-gFd"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="N8e-8Q-CaW">
                             <connections>
                                 <segue destination="jSv-LZ-hic" kind="show" id="Gk4-Rx-oD7"/>
@@ -347,6 +345,43 @@
             </objects>
             <point key="canvasLocation" x="2817.2093023255816" y="3.8626609442060089"/>
         </scene>
+        <!--AIChat-->
+        <scene sceneID="lyU-M1-ie3">
+            <objects>
+                <viewController id="tn3-Bl-jf6" customClass="AIChatViewController" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pfe-uX-Lxy">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChattrans" translatesAutoresizingMaskIntoConstraints="NO" id="8Qs-FA-F6f">
+                                <rect key="frame" x="115" y="366" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="rxd-yd-jQx"/>
+                                    <constraint firstAttribute="width" constant="200" id="y0e-Sv-Y1F"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-p8-YUa">
+                                <rect key="frame" x="157" y="581" width="116.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n79-Ky-NsC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6WG-p8-YUa" firstAttribute="centerX" secondItem="Pfe-uX-Lxy" secondAttribute="centerX" id="NOg-Cp-ifP"/>
+                            <constraint firstItem="8Qs-FA-F6f" firstAttribute="centerY" secondItem="Pfe-uX-Lxy" secondAttribute="centerY" id="OOB-0l-0Ag"/>
+                            <constraint firstItem="8Qs-FA-F6f" firstAttribute="centerX" secondItem="Pfe-uX-Lxy" secondAttribute="centerX" id="dF2-jN-WOV"/>
+                            <constraint firstItem="6WG-p8-YUa" firstAttribute="top" secondItem="8Qs-FA-F6f" secondAttribute="bottom" constant="15" id="q41-fN-aqe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AIChat" id="Gab-Fy-DPd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eS7-7B-Dyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="1395"/>
+        </scene>
         <!--Scanner-->
         <scene sceneID="9ld-Wz-PoJ">
             <objects>
@@ -385,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqB-OG-WZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162.3255813953488" y="685.62231759656652"/>
+            <point key="canvasLocation" x="4201" y="624"/>
         </scene>
         <!--Add Friends-->
         <scene sceneID="pYz-Mo-om8">
@@ -472,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTr-PM-jq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980.916030534351" y="685.91549295774655"/>
+            <point key="canvasLocation" x="2533" y="727"/>
         </scene>
         <!--Conform View-->
         <scene sceneID="S65-UY-9uh">
@@ -531,7 +566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci4-to-37G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817" y="686"/>
+            <point key="canvasLocation" x="3328" y="727"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6ac-DR-w2q">
@@ -547,7 +582,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8h-ae-Q3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="3"/>
+            <point key="canvasLocation" x="-687" y="3"/>
         </scene>
         <!--Create Account View-->
         <scene sceneID="gWq-3V-sle">
@@ -679,6 +714,7 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
+        <image name="leafChattrans" width="1001" height="983"/>
         <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
