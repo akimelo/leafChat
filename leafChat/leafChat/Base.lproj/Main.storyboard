@@ -126,7 +126,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.18437118299999999" green="0.409537965" blue="0.39803012049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Chat with Friends🍃"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Chat with Friends"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Tn0-TR-T59"/>
                                 </connections>
@@ -506,7 +506,7 @@
                         <outlet property="idField" destination="UwC-fy-CsR" id="VPY-qt-6Wa"/>
                         <outlet property="idLabel" destination="OMB-wb-0RX" id="eI5-Iu-LEF"/>
                         <outlet property="qrView" destination="dZK-Pw-iRV" id="Jws-e6-qg9"/>
-                        <segue destination="gAu-Cw-e9v" kind="presentation" id="mxg-2d-vp5"/>
+                        <segue destination="gAu-Cw-e9v" kind="presentation" identifier="conform" id="mxg-2d-vp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTr-PM-jq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
