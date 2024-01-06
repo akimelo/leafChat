@@ -632,9 +632,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zE-m5-36C">
-                                <rect key="frame" x="182" y="817" width="66" height="35"/>
+                                <rect key="frame" x="151" y="817" width="128" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to Login"/>
                                 <connections>
                                     <action selector="onBack:" destination="ESh-Xk-xaY" eventType="touchUpInside" id="O3r-99-Swv"/>
                                 </connections>
@@ -665,7 +665,7 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChatlogo" translatesAutoresizingMaskIntoConstraints="NO" id="EcC-np-qoQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChattrans" translatesAutoresizingMaskIntoConstraints="NO" id="EcC-np-qoQ">
                                 <rect key="frame" x="165.66666666666666" y="121.33333333333331" width="98.999999999999972" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="2Ff-DI-C0c"/>
@@ -718,7 +718,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
-        <image name="leafChatlogo" width="333.66665649414062" height="327.66665649414062"/>
         <image name="leafChattrans" width="1001" height="983"/>
         <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
