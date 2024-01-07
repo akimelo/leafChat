@@ -102,3 +102,6 @@ iOSInjectionProject/
 # FireBase
 GoogleService-Info.plist
 # google-services.json //Android用
+
+# KARTE
+Karte-Info.plist
