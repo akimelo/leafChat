@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class AIChatViewController: UIViewController {
 
@@ -13,6 +14,12 @@ class AIChatViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("chat_ai", title: "AIチャット")
+//        print("KARTE_chat_ai")
     }
     
 
