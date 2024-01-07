@@ -142,6 +142,7 @@
 				D29F92B12B42BFA6007916F5 /* Frameworks */,
 				D29F92B22B42BFA6007916F5 /* Resources */,
 				0A740A1FE26D34863DD703EE /* [CP] Embed Pods Frameworks */,
+				005A8DF314D6061C1C2C6AD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +203,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		005A8DF314D6061C1C2C6AD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-leafChat/Pods-leafChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0A740A1FE26D34863DD703EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
