@@ -8,6 +8,7 @@
 import AVFoundation
 import AudioToolbox
 import UIKit
+import KarteCore
 
 class QRScanner:UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
@@ -54,6 +55,12 @@ class QRScanner:UIViewController,AVCaptureMetadataOutputObjectsDelegate {
             print(error)
             return
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("scan_qr", title: "QRコードスキャン")
+//        print("KARTE_scan_qr")
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {

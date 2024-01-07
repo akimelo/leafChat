@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class LoginView: UIViewController {
 
@@ -23,6 +24,12 @@ class LoginView: UIViewController {
         if AuthHelper().uid() != "" {
             dismiss(animated: false, completion: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("login", title: "ログイン")
+//        print("KARTE_login")
     }
     
     @IBAction func onLogin(_ sender: Any) {

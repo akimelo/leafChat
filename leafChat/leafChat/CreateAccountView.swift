@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -21,6 +22,12 @@ class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UIN
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("create_account", title: "アカウント作成")
+//        print("KARTE_create_account")
     }
     
     @objc func hideKeyboard(){

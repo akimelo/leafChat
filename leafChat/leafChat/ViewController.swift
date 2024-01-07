@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -30,6 +31,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
             })
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("chat_list", title: "チャット一覧")
+//        print("KARTE_chat_list")
     }
 
     @IBAction func onLogOut(_ sender: Any) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource, InputViewDelegate {
 
@@ -52,6 +53,12 @@ class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource, In
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60.0, right: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("chat_detail", title: "チャット詳細")
+//        print("KARTE_chat_detail")
     }
     
     @objc func keyboardWillShow(_ notification: Notification){

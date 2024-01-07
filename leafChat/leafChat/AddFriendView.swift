@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class AddFriendView: UIViewController {
 
@@ -22,6 +23,12 @@ class AddFriendView: UIViewController {
         qrView.image = makeQRCode(text: uid)
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("search_friends", title: "友達検索")
+//        print("KARTE_search_friends")
     }
     
     @IBAction func onSearch(_ sender: Any) {
@@ -100,6 +107,12 @@ class ConformView :UIViewController {
         database.getImage(userID: userID, imageView: imageView)
         imageView.layer.cornerRadius = imageView.frame.height*0.5
         imageView.clipsToBounds = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("add_friends", title: "友達追加")
+//        print("KARTE_add_friends")
     }
     
     @IBAction func onAdd(_ sender: Any) {
