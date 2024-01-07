@@ -21,5 +21,7 @@ target 'leafChat' do
   pod 'KarteVisualTracking' # ビジュアルトラッキング機能を提供します。
   pod 'KarteInbox' # Push通知の送信履歴を取得する機能を提供します（β版）。
   pod 'KarteCrashReporting' # クラッシュイベントのトラッキング機能を提供します。
+  # NativeBrik
+  pod 'Nativebrik'
 
 end
