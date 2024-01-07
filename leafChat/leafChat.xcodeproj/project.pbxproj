@@ -29,6 +29,7 @@
 		D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */; };
 		D2F76FE72B4A762800CC09E6 /* Karte-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2F76FE62B4A762800CC09E6 /* Karte-Info.plist */; };
 		D2FD47DF2B4ACA5F00A9E2B6 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = D2FD47DE2B4ACA5F00A9E2B6 /* .env */; };
+		D2FD47E12B4ACBD200A9E2B6 /* LoadEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD47E02B4ACBD200A9E2B6 /* LoadEnv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatViewController.swift; sourceTree = "<group>"; };
 		D2F76FE62B4A762800CC09E6 /* Karte-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Karte-Info.plist"; sourceTree = "<group>"; };
 		D2FD47DE2B4ACA5F00A9E2B6 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		D2FD47E02B4ACBD200A9E2B6 /* LoadEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEnv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D2F76FE22B4965A100CC09E6 /* MenuController.swift */,
 				D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */,
 				D2FD47DE2B4ACA5F00A9E2B6 /* .env */,
+				D2FD47E02B4ACBD200A9E2B6 /* LoadEnv.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				D2F76FE32B4965A100CC09E6 /* MenuController.swift in Sources */,
 				D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */,
 				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
+				D2FD47E12B4ACBD200A9E2B6 /* LoadEnv.swift in Sources */,
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,
 				D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */,
 				D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */,

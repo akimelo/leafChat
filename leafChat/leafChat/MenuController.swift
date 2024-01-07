@@ -14,6 +14,9 @@ class MenuController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let env = try! LoadEnv()
+        print(env.value("API_KEY")!)        
+        
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
         let window = windowScene?.windows.first
