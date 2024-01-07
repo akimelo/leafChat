@@ -865,6 +865,30 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.3.0)
+  - KarteCore (2.24.1):
+    - KarteUtilities (~> 3.8)
+  - KarteCrashReporter (1.11.0)
+  - KarteCrashReporting (2.7.1):
+    - KarteCore (~> 2.0)
+    - KarteCrashReporter (~> 1.11)
+  - KarteInAppMessaging (2.16.0):
+    - KarteCore (~> 2.23)
+    - KarteUtilities (~> 3.8)
+  - KarteInbox (0.1.0):
+    - KarteCore (~> 2.22)
+    - KarteUtilities (~> 3.5)
+  - KarteRemoteNotification (2.11.0):
+    - KarteCore (~> 2.0)
+    - KarteUtilities (~> 3.8)
+  - KarteUtilities (3.10.1):
+    - KarteUtilities/standard (= 3.10.1)
+  - KarteUtilities/standard (3.10.1)
+  - KarteVariables (2.7.1):
+    - KarteCore (~> 2.22)
+    - KarteUtilities (~> 3.5)
+  - KarteVisualTracking (2.12.0):
+    - KarteCore (~> 2.22)
+    - KarteUtilities (~> 3.8)
   - leveldb-library (1.22.2)
   - nanopb (2.30909.1):
     - nanopb/decode (= 2.30909.1)
@@ -884,6 +908,13 @@ DEPENDENCIES:
   - FirebaseStorageUI
   - FirebaseUI
   - GoogleUtilities
+  - KarteCore
+  - KarteCrashReporting
+  - KarteInAppMessaging
+  - KarteInbox
+  - KarteRemoteNotification
+  - KarteVariables
+  - KarteVisualTracking
   - SDWebImage
 
 SPEC REPOS:
@@ -923,6 +954,15 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - KarteCore
+    - KarteCrashReporter
+    - KarteCrashReporting
+    - KarteInAppMessaging
+    - KarteInbox
+    - KarteRemoteNotification
+    - KarteUtilities
+    - KarteVariables
+    - KarteVisualTracking
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -965,12 +1005,21 @@ SPEC CHECKSUMS:
   gRPC-Core: a21a60aefc08c68c247b439a9ef97174b0c54f96
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
+  KarteCore: 04b2e51ec1a695113b58f03c87ddd155dd3f10e0
+  KarteCrashReporter: b5cac8912888404eba60d08a21de42a591b080bc
+  KarteCrashReporting: 114fb565877d7565574ba4eef2fcdeafac98bc7d
+  KarteInAppMessaging: 448cd88c42ff976efbc76ed75b31b72a6fce8e6d
+  KarteInbox: 62c731059f5fcc64c4c7c16a911b1147c5af69d8
+  KarteRemoteNotification: c3618f473e56d21f48d3b85ac31414452e2cb953
+  KarteUtilities: 36833353e1c1fc62dd85cc3de41a38eab01a9c9e
+  KarteVariables: 10cb966503acb6f9e3953fc2244f1d7652d59bb5
+  KarteVisualTracking: 95208695e37b1338d27819da210292efe193c263
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a
 
-PODFILE CHECKSUM: 3117a8f61ff934007f7b8ae7278740fe67df5f32
+PODFILE CHECKSUM: 52ba0e3aa6ab3935b6b0745179d3c949c49ded33
 
 COCOAPODS: 1.13.0

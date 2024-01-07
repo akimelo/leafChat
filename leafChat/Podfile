@@ -13,5 +13,13 @@ target 'leafChat' do
   pod 'FirebaseUI'
   pod 'FirebaseStorageUI'
   pod 'GoogleUtilities'
+  # KARTE
+  pod 'KarteCore' # イベントトラッキング機能を提供します。
+  pod 'KarteInAppMessaging' # アプリ内メッセージ機能を提供します。
+  pod 'KarteRemoteNotification' # プッシュ通知の受信および効果測定機能を提供します。
+  pod 'KarteVariables' # 設定値配信機能を提供します。
+  pod 'KarteVisualTracking' # ビジュアルトラッキング機能を提供します。
+  pod 'KarteInbox' # Push通知の送信履歴を取得する機能を提供します（β版）。
+  pod 'KarteCrashReporting' # クラッシュイベントのトラッキング機能を提供します。
 
 end
