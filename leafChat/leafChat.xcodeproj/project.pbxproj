@@ -28,6 +28,7 @@
 		D2F76FE32B4965A100CC09E6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F76FE22B4965A100CC09E6 /* MenuController.swift */; };
 		D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */; };
 		D2F76FE72B4A762800CC09E6 /* Karte-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2F76FE62B4A762800CC09E6 /* Karte-Info.plist */; };
+		D2FD47DF2B4ACA5F00A9E2B6 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = D2FD47DE2B4ACA5F00A9E2B6 /* .env */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		D2F76FE22B4965A100CC09E6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatViewController.swift; sourceTree = "<group>"; };
 		D2F76FE62B4A762800CC09E6 /* Karte-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Karte-Info.plist"; sourceTree = "<group>"; };
+		D2FD47DE2B4ACA5F00A9E2B6 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				D2F76FE02B49212A00CC09E6 /* InputView.xib */,
 				D2F76FE22B4965A100CC09E6 /* MenuController.swift */,
 				D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */,
+				D2FD47DE2B4ACA5F00A9E2B6 /* .env */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				D29F92C42B42BFA7007916F5 /* LaunchScreen.storyboard in Resources */,
 				D2F76FE72B4A762800CC09E6 /* Karte-Info.plist in Resources */,
 				D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */,
+				D2FD47DF2B4ACA5F00A9E2B6 /* .env in Resources */,
 				D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */,
 				D29F92C12B42BFA7007916F5 /* Assets.xcassets in Resources */,
 				D29F92BF2B42BFA6007916F5 /* Main.storyboard in Resources */,
