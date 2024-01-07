@@ -84,6 +84,21 @@ class DatabaseHelper {
 
     }
     
+    func getImageURL(userID: String, completion: @escaping (String?, Error?) -> Void) {
+        let imageRef = storage.child("image/"+userID+".jpeg")
+        
+        imageRef.downloadURL { url, error in
+            if let error = error {
+                print(error)
+                completion(nil, error)
+            } else if let url = url {
+                let imageUrl = url.absoluteString
+                print(imageUrl)
+                completion(imageUrl, nil)
+            }
+        }
+    }
+    
     func getUserName(userID:String,result:@escaping(String) -> Void) {
         db.collection("user").document(userID).getDocument(completion: {
             (doc, error) in
