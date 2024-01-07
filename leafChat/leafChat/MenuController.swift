@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KarteCore
 
 class MenuController: UIViewController {
 
@@ -24,6 +25,12 @@ class MenuController: UIViewController {
         } else {
             print(uid)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Tracker.view("", title: "")
+//        print("KARTE_")
     }
     
     @IBAction func onLogOut(_ sender: Any) {
