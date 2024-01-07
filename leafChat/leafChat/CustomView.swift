@@ -31,6 +31,22 @@ class InsetLabel: UILabel {
     }
 }
 
+class NativeBrikView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        let uiview = nativebrik
+            .experiment
+            .embeddingUIView("TEST_2")
+        uiview.frame = CGRect(x: 0, y: 500, width: 600, height: 100) // recommended: set the frmae
+        self.addSubview(uiview)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class InputView :UIView {
     @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!

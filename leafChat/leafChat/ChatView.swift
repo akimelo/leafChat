@@ -37,7 +37,7 @@ class ChatView: UIViewController, UITableViewDelegate, UITableViewDataSource, In
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         database.getUserName(userID: roomData.userID, result: {
             name in

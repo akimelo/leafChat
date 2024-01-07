@@ -7,16 +7,37 @@
 
 import UIKit
 import KarteCore
+import Nativebrik
+
+let env = try! LoadEnv()
+let nativebrik = {
+    return NativebrikClient(projectId: env.value("PROJECT_ID_NATIVEBRIK")!)
+}()
 
 class MenuController: UIViewController {
+    
+    private let nbView = NativeBrikView()
+    
+    override func loadView() {
+        super.loadView()
+        view.addSubview(nbView)
+        
+        let uiview = nativebrik
+            .experiment
+            .embeddingUIView("TEST_1")
+        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 70) // recommended: set the frmae
+        self.view.addSubview(uiview)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        let env = try! LoadEnv()
-        print(env.value("API_KEY")!)        
         
+        // add nativebrik.overlay to the top.
+        let overlay = nativebrik.overlayViewController()
+        self.addChild(overlay)
+        self.view.addSubview(overlay.view)
+
+        // Do any additional setup after loading the view.        
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
         let window = windowScene?.windows.first
