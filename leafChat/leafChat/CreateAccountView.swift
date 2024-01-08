@@ -22,6 +22,21 @@ class CreateAccountView: UIViewController, UIImagePickerControllerDelegate & UIN
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+        
+        nameField.layer.borderColor = UIColor.gray.cgColor
+        nameField.layer.borderWidth = 1.0
+        nameField.layer.cornerRadius = 5.0
+        nameField.placeholder = "leafme"
+        
+        emailField.layer.borderColor = UIColor.gray.cgColor
+        emailField.layer.borderWidth = 1.0
+        emailField.layer.cornerRadius = 5.0
+        emailField.placeholder = "example@example.com"
+        
+        passwordField.layer.borderColor = UIColor.gray.cgColor
+        passwordField.layer.borderWidth = 1.0
+        passwordField.layer.cornerRadius = 5.0
+        passwordField.placeholder = "your password"
     }
     
     override func viewDidAppear(_ animated: Bool) {

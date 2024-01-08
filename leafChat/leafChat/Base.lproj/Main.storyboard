@@ -354,26 +354,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChatMonster_Background Removal" translatesAutoresizingMaskIntoConstraints="NO" id="8Qs-FA-F6f">
-                                <rect key="frame" x="115" y="366" width="200" height="200"/>
+                                <rect key="frame" x="165" y="416" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="rxd-yd-jQx"/>
-                                    <constraint firstAttribute="width" constant="200" id="y0e-Sv-Y1F"/>
+                                    <constraint firstAttribute="height" constant="100" id="rxd-yd-jQx"/>
+                                    <constraint firstAttribute="width" constant="100" id="y0e-Sv-Y1F"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-p8-YUa">
-                                <rect key="frame" x="157" y="581" width="116.33333333333331" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n79-Ky-NsC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6WG-p8-YUa" firstAttribute="centerX" secondItem="Pfe-uX-Lxy" secondAttribute="centerX" id="NOg-Cp-ifP"/>
                             <constraint firstItem="8Qs-FA-F6f" firstAttribute="centerY" secondItem="Pfe-uX-Lxy" secondAttribute="centerY" id="OOB-0l-0Ag"/>
                             <constraint firstItem="8Qs-FA-F6f" firstAttribute="centerX" secondItem="Pfe-uX-Lxy" secondAttribute="centerX" id="dF2-jN-WOV"/>
-                            <constraint firstItem="6WG-p8-YUa" firstAttribute="top" secondItem="8Qs-FA-F6f" secondAttribute="bottom" constant="15" id="q41-fN-aqe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AIChat" id="Gab-Fy-DPd"/>

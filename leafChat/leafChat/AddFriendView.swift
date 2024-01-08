@@ -23,6 +23,10 @@ class AddFriendView: UIViewController {
         qrView.image = makeQRCode(text: uid)
         
         // Do any additional setup after loading the view.
+        idField.layer.borderColor = UIColor.gray.cgColor
+        idField.layer.borderWidth = 1.0
+        idField.layer.cornerRadius = 5.0
+        idField.placeholder = "your friend's ID"
     }
     
     override func viewDidAppear(_ animated: Bool) {

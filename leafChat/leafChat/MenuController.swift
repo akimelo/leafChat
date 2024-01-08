@@ -23,7 +23,7 @@ class MenuController: UIViewController {
         let uiview = nativebrik
             .experiment
             .embeddingUIView("TEST_1")
-        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 70)
+        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 65)
         self.view.addSubview(uiview)
     }
 

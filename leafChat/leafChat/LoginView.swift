@@ -17,6 +17,15 @@ class LoginView: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        emailField.layer.borderColor = UIColor.gray.cgColor
+        emailField.layer.borderWidth = 1.0
+        emailField.layer.cornerRadius = 5.0
+        emailField.placeholder = "example@example.com"
+        
+        passwordField.layer.borderColor = UIColor.gray.cgColor
+        passwordField.layer.borderWidth = 1.0
+        passwordField.layer.cornerRadius = 5.0
+        passwordField.placeholder = "your password"
     }
     
     override func viewWillAppear(_ animated: Bool) {
