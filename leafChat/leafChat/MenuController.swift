@@ -16,16 +16,14 @@ let nativebrik = {
 
 class MenuController: UIViewController {
     
-    private let nbView = NativeBrikView()
+//    private let nbView = NativeBrikView()
     
     override func loadView() {
         super.loadView()
-        view.addSubview(nbView)
-        
         let uiview = nativebrik
             .experiment
             .embeddingUIView("TEST_1")
-        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 70) // recommended: set the frmae
+        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 70)
         self.view.addSubview(uiview)
     }
 
