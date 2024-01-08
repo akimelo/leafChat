@@ -14,6 +14,15 @@ class AIChatViewController: UIViewController {
     
     var animateMoveUpFlug: Bool = false
     
+    override func loadView() {
+        super.loadView()
+        let uiview = nativebrik
+            .experiment
+            .embeddingUIView("TEST_2")
+        uiview.frame = CGRect(x: 60, y: 480, width: UIScreen.main.bounds.width - 120, height: 70)
+        self.view.addSubview(uiview)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
