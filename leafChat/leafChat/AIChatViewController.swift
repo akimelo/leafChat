@@ -10,10 +10,15 @@ import KarteCore
 
 class AIChatViewController: UIViewController {
 
+    @IBOutlet weak var leafChatIcon: UIImageView!
+    
+    var animateMoveUpFlug: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        moveAnimation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -22,6 +27,24 @@ class AIChatViewController: UIViewController {
 //        print("KARTE_chat_ai")
     }
     
+    func moveAnimation() {
+        var animator: UIViewPropertyAnimator
+        if animateMoveUpFlug {
+            animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear, animations: {
+               self.leafChatIcon.center.y -= 50
+           })
+        } else {
+            animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear, animations: {
+                self.leafChatIcon.center.y += 50
+            })
+        }
+        animator.startAnimation()
+        //完了時に再帰呼び出しを行う
+        animator.addCompletion{_ in
+            self.animateMoveUpFlug.toggle()
+            self.moveAnimation()
+        }
+    }
 
     /*
     // MARK: - Navigation

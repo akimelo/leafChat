@@ -353,7 +353,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChattrans" translatesAutoresizingMaskIntoConstraints="NO" id="8Qs-FA-F6f">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafChatMonster_Background Removal" translatesAutoresizingMaskIntoConstraints="NO" id="8Qs-FA-F6f">
                                 <rect key="frame" x="115" y="366" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="rxd-yd-jQx"/>
@@ -377,6 +377,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AIChat" id="Gab-Fy-DPd"/>
+                    <connections>
+                        <outlet property="leafChatIcon" destination="8Qs-FA-F6f" id="7pw-75-Sct"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS7-7B-Dyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -718,6 +721,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="leafChatMonster_Background Removal" width="990" height="990"/>
         <image name="leafChattrans" width="1001" height="983"/>
         <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
