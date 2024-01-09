@@ -17,13 +17,14 @@ let nativebrik = {
 class MenuController: UIViewController {
     
 //    private let nbView = NativeBrikView()
+    @IBOutlet weak var iconVIew: UIImageView!
     
     override func loadView() {
         super.loadView()
         let uiview = nativebrik
             .experiment
             .embeddingUIView("TEST_1")
-        uiview.frame = CGRect(x: 20, y: 215, width: UIScreen.main.bounds.width - 40, height: 65)
+        uiview.frame = CGRect(x: 20, y: 615, width: UIScreen.main.bounds.width - 40, height: 65)
         self.view.addSubview(uiview)
     }
 
