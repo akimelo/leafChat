@@ -12,6 +12,7 @@ target 'leafChat' do
   pod 'SDWebImage'
   pod 'FirebaseUI'
   pod 'FirebaseStorageUI'
+  pod 'FirebaseMessaging'
   pod 'GoogleUtilities'
   # KARTE
   pod 'KarteCore' # イベントトラッキング機能を提供します。
