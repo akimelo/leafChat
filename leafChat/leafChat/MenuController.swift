@@ -32,6 +32,8 @@ class MenuController: UIViewController {
         super.viewDidLoad()
         
         // add nativebrik.overlay to the top.
+        iconVIew.layer.cornerRadius = iconVIew.frame.size.width * 0.5
+        
         let overlay = nativebrik.overlayViewController()
         self.addChild(overlay)
         self.view.addSubview(overlay.view)
@@ -50,6 +52,8 @@ class MenuController: UIViewController {
         } else {
             var iconimageurl = ""
             let email = AuthHelper().email()
+            
+            database.getImage(userID: uid, imageView: iconVIew)
             
             database.getImageURL(userID: uid) { imageUrl, error in
                 if let error = error {
