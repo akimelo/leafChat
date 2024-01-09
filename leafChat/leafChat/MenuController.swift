@@ -18,13 +18,14 @@ class MenuController: UIViewController {
     
 //    private let nbView = NativeBrikView()
     @IBOutlet weak var iconVIew: UIImageView!
+    @IBOutlet weak var iconName: UILabel!
     
     override func loadView() {
         super.loadView()
         let uiview = nativebrik
             .experiment
             .embeddingUIView("TEST_1")
-        uiview.frame = CGRect(x: 20, y: 615, width: UIScreen.main.bounds.width - 40, height: 65)
+        uiview.frame = CGRect(x: 20, y: 635, width: UIScreen.main.bounds.width - 40, height: 65)
         self.view.addSubview(uiview)
     }
 
@@ -54,6 +55,10 @@ class MenuController: UIViewController {
             let email = AuthHelper().email()
             
             database.getImage(userID: uid, imageView: iconVIew)
+            database.getUserName(userID: uid, result: {
+                name in
+                self.iconName.text = name
+            })
             
             database.getImageURL(userID: uid) { imageUrl, error in
                 if let error = error {
