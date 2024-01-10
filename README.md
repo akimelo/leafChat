@@ -17,3 +17,9 @@
 <p align="center">
     <img src="https://github.com/akimelo/leafChat/assets/103817251/1b7bd921-cfbf-429f-afb3-564d837221d8" width="800px">
 </p>
+
+## How to get start
+
+1. Open a terminal and git clone in any directory.
+2. Make .env file.
+3. Put GoogleService-Info.plist file and Karte-Info.plist file.
