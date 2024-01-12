@@ -7,7 +7,7 @@ target 'leafChat' do
 
   # Pods for leafChat
   pod 'FirebaseAnalytics'
-  pod 'FirebaseInAppMessaging'
+  pod 'FirebaseInAppMessaging', "> 10.7-beta" # Beta products need to specify a beta versioning range
   pod 'FirebaseRemoteConfig'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
