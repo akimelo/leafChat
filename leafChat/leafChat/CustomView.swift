@@ -31,7 +31,7 @@ class InsetLabel: UILabel {
     }
 }
 
-class NativeBrikView: UIView {
+class NativebrikView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
