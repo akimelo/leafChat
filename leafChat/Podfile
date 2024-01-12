@@ -6,6 +6,9 @@ target 'leafChat' do
   use_frameworks!
 
   # Pods for leafChat
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseInAppMessaging'
+  pod 'FirebaseRemoteConfig'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
