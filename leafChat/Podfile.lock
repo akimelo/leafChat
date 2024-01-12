@@ -648,6 +648,27 @@ PODS:
   - FBSDKCoreKit_Basics (16.3.1)
   - FBSDKLoginKit (16.3.1):
     - FBSDKCoreKit (= 16.3.1)
+  - FirebaseABTesting (10.19.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseAnalytics (10.19.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.19.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.19.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.19.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalyticsInterop (1.5.0)
   - FirebaseAnonymousAuthUI (13.1.0):
     - FirebaseAuth (< 11.0, >= 8.0)
     - FirebaseAuthUI
@@ -716,11 +737,17 @@ PODS:
     - FirebaseAuthUI
     - FirebaseCore
     - GoogleSignIn (~> 6.0)
+  - FirebaseInAppMessaging (0.13.0):
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseCore
+    - FirebaseInstanceID
   - FirebaseInstallations (10.19.0):
     - FirebaseCore (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
     - PromisesObjC (~> 2.1)
+  - FirebaseInstanceID (2.0.7)
   - FirebaseMessaging (10.19.0):
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
@@ -736,6 +763,13 @@ PODS:
   - FirebasePhoneAuthUI (13.1.0):
     - FirebaseAuth
     - FirebaseAuthUI
+  - FirebaseRemoteConfig (10.19.0):
+    - FirebaseABTesting (~> 10.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseSharedSwift (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
   - FirebaseSharedSwift (10.19.0)
   - FirebaseStorage (10.19.0):
     - FirebaseAppCheckInterop (~> 10.0)
@@ -777,6 +811,26 @@ PODS:
     - FirebasePhoneAuthUI (~> 13.0)
   - FirebaseUI/Storage (13.1.0):
     - FirebaseStorageUI (~> 13.0)
+  - GoogleAppMeasurement (10.19.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.19.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.19.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.19.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.19.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - GoogleDataTransport (9.3.0):
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
@@ -925,9 +979,12 @@ PODS:
     - Yoga (~> 2.0.1)
 
 DEPENDENCIES:
+  - FirebaseAnalytics
   - FirebaseAuth
   - FirebaseFirestore
+  - FirebaseInAppMessaging
   - FirebaseMessaging
+  - FirebaseRemoteConfig
   - FirebaseStorage
   - FirebaseStorageUI
   - FirebaseUI
@@ -951,6 +1008,9 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseAnonymousAuthUI
     - FirebaseAppCheckInterop
     - FirebaseAuth
@@ -967,14 +1027,18 @@ SPEC REPOS:
     - FirebaseFirestoreInternal
     - FirebaseFirestoreUI
     - FirebaseGoogleAuthUI
+    - FirebaseInAppMessaging
     - FirebaseInstallations
+    - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseOAuthUI
     - FirebasePhoneAuthUI
+    - FirebaseRemoteConfig
     - FirebaseSharedSwift
     - FirebaseStorage
     - FirebaseStorageUI
     - FirebaseUI
+    - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleSignIn
     - GoogleUtilities
@@ -1008,6 +1072,9 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 5e4dd478947ab1bcc887e8cfadeae0727af1a942
   FBSDKCoreKit_Basics: cd7b5f5d1e8868c26706917919d058999ca672c3
   FBSDKLoginKit: 572cca0bc6c90067ef197187697cb3b584310c52
+  FirebaseABTesting: bfa3b384b68cee10a89183649c64cd7998a37a12
+  FirebaseAnalytics: 87513010b13b7c8610164d3602ea10571f76afc1
+  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
   FirebaseAnonymousAuthUI: 03392075a7f79a674b49af1678989ded80e106f2
   FirebaseAppCheckInterop: 37884781f3e16a1ba47e7ec80a1e805f987788e3
   FirebaseAuth: 2492acdcd1245d841fabdf58a050d6aa07dfce3f
@@ -1024,14 +1091,18 @@ SPEC CHECKSUMS:
   FirebaseFirestoreInternal: a15405fb607dfd14edd568bba77028f4c7a69688
   FirebaseFirestoreUI: 98ddae8daaea34a3c8bc0a51e4f5c104b997f8b8
   FirebaseGoogleAuthUI: 420e5b1c10f13a47c18579303d93275842f1a8a0
+  FirebaseInAppMessaging: 25e8c4408829928b6727fb461e0aef6a43111467
   FirebaseInstallations: 033d199474164db20c8350736842a94fe717b960
+  FirebaseInstanceID: 148c25c986c8699e67304b114e365713dce467f2
   FirebaseMessaging: d322bd030a0e97398bf134746e087b88e6ba0074
   FirebaseOAuthUI: 5f19522e97d992841163d89a0b44afe315674020
   FirebasePhoneAuthUI: 4e32b332ba0484a0b6cf8246c93c23a24f9dbcad
+  FirebaseRemoteConfig: a7fcc7a5941faa7e09248e91c8797340aa4c85f6
   FirebaseSharedSwift: f34eeb7d3ea87a34497629b6ca41657beadef76a
   FirebaseStorage: 1e0b9c9c18fb73ee3c5728a370c0e7355f8e88e3
   FirebaseStorageUI: 5db14fc4c251fdbe3b706eb1a9dddc55bc51b414
   FirebaseUI: d3e0d3f81f5c464554945195a6133a3ab905b6a7
+  GoogleAppMeasurement: 68afe759316673c6554dac35a0c7ae8f5d6cb4ed
   GoogleDataTransport: 57c22343ab29bc686febbf7cbb13bad167c2d8fe
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
   GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
@@ -1057,6 +1128,6 @@ SPEC CHECKSUMS:
   Yoga: 7ac7f65e2d7120bf97e75fd66436ed4c7bf8e37e
   YogaKit: 4751ba673fab49df29e2235e23c4ea7d6d5a339c
 
-PODFILE CHECKSUM: 51097c800476eb278b72ecb30e56d05ff4e12c89
+PODFILE CHECKSUM: ed699d73df471350d915e4915fccfd0358c8020d
 
 COCOAPODS: 1.13.0
