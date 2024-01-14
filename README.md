@@ -12,6 +12,14 @@
     - Chat with Friends Real-time.
     - Security Settings
 
+## Requirements
+
+- iOS 15.0+
+- Xcode 15.2+
+- Swift 5+
+
+## OverView
+
 - Here is OverView and Products used for creating leafChat App.
 
 <p align="center">
