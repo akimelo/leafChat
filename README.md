@@ -4,6 +4,8 @@
     <img src="https://github.com/akimelo/leafChat/assets/103817251/0625dc2c-d346-4934-b3da-6477afcb6f07" width="120px">
 </p>
 
+## About
+
 - This is Chat App(iOS) using FireBase.
     - Build App.
     - Make your Account.
