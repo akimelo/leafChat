@@ -161,12 +161,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-fK-rPK">
-                                <rect key="frame" x="245" y="363" width="30" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-fK-rPK">
+                                <rect key="frame" x="235" y="353" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.22041628960000001" green="0.5" blue="0.49063602480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4mV-bi-kXF"/>
-                                    <constraint firstAttribute="width" constant="30" id="gCs-YI-MEY"/>
+                                    <constraint firstAttribute="height" constant="40" id="4mV-bi-kXF"/>
+                                    <constraint firstAttribute="width" constant="40" id="gCs-YI-MEY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
