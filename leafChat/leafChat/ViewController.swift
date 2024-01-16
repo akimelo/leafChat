@@ -8,11 +8,13 @@
 import UIKit
 import KarteCore
 import Nativebrik
+import KarteVariables
 
 let env = try! LoadEnv()
 let nativebrik = {
     return NativebrikClient(projectId: env.value("PROJECT_ID_NATIVEBRIK")!)
 }()
+let variable = Variables.variable(forKey: "visit_count")
 
 class ViewController: UIViewController {
     
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
         self.view.addSubview(overlay.view)
 
         // Do any additional setup after loading the view.
-        visitCount.text = "aaa"
+        visitCount.text = variable.string(default: "foo")
         
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
