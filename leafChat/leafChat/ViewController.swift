@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 //    private let nbView = NativeBrikView()
     @IBOutlet weak var iconVIew: UIImageView!
     @IBOutlet weak var iconName: UILabel!
+    @IBOutlet weak var visitCount: UILabel!
     
     override func loadView() {
         super.loadView()
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         
         // add nativebrik.overlay to the top.
         iconVIew.layer.cornerRadius = iconVIew.frame.size.width * 0.5
+        visitCount.layer.cornerRadius = visitCount.frame.size.width * 0.5
         
         let overlay = nativebrik.overlayViewController()
         self.addChild(overlay)

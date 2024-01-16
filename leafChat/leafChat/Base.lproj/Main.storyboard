@@ -161,13 +161,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-fK-rPK">
+                                <rect key="frame" x="269" y="382" width="16" height="21"/>
+                                <color key="backgroundColor" red="0.22041628960000001" green="0.5" blue="0.49063602480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="THV-c4-RF8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="64b-RF-Hpn" firstAttribute="top" secondItem="8Rg-iA-Qsr" secondAttribute="bottom" constant="20" id="20X-c4-IoR"/>
                             <constraint firstItem="64b-RF-Hpn" firstAttribute="centerX" secondItem="Uei-lJ-3Vd" secondAttribute="centerX" id="4Or-ad-hW1"/>
+                            <constraint firstItem="0Ws-fK-rPK" firstAttribute="trailing" secondItem="8Rg-iA-Qsr" secondAttribute="trailing" id="6Hz-2G-Zf9"/>
                             <constraint firstItem="ndl-xd-Xti" firstAttribute="height" secondItem="IGz-ve-tgz" secondAttribute="height" id="Sxq-VQ-KT1"/>
+                            <constraint firstItem="0Ws-fK-rPK" firstAttribute="bottom" secondItem="8Rg-iA-Qsr" secondAttribute="bottom" id="WDa-8e-uhQ"/>
                             <constraint firstItem="c90-6w-PhU" firstAttribute="trailing" secondItem="THV-c4-RF8" secondAttribute="trailing" id="aTf-yv-0A4"/>
                             <constraint firstItem="8Rg-iA-Qsr" firstAttribute="top" secondItem="THV-c4-RF8" secondAttribute="top" constant="160" id="ils-Xj-5Qc"/>
                             <constraint firstItem="ndl-xd-Xti" firstAttribute="top" secondItem="THV-c4-RF8" secondAttribute="top" constant="458" id="kVD-lc-PZE"/>
@@ -191,6 +200,7 @@
                     <connections>
                         <outlet property="iconName" destination="64b-RF-Hpn" id="eDr-eM-UFH"/>
                         <outlet property="iconVIew" destination="8Rg-iA-Qsr" id="3iO-Ly-eAa"/>
+                        <outlet property="visitCount" destination="0Ws-fK-rPK" id="mvh-wg-cuq"/>
                         <segue destination="MXx-0f-jus" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="wFm-BP-BMa"/>
                     </connections>
                 </viewController>
