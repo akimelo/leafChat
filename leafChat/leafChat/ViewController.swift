@@ -14,7 +14,6 @@ let env = try! LoadEnv()
 let nativebrik = {
     return NativebrikClient(projectId: env.value("PROJECT_ID_NATIVEBRIK")!)
 }()
-let variable = Variables.variable(forKey: "visit_count")
 
 class ViewController: UIViewController {
     
@@ -40,12 +39,18 @@ class ViewController: UIViewController {
         visitCount.layer.cornerRadius = 10
         visitCount.clipsToBounds = true
         
+        let variable = Variables.variable(forKey: "aki_test")
+        
         let overlay = nativebrik.overlayViewController()
         self.addChild(overlay)
         self.view.addSubview(overlay.view)
 
         // Do any additional setup after loading the view.
         visitCount.text = variable.string(default: "foo")
+        print("KARTE_variables")
+        print(variable)
+        print(variable.string)
+        print(variable.string(default: "foo"))
         
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
