@@ -35,13 +35,16 @@ class ViewController: UIViewController {
         
         // add nativebrik.overlay to the top.
         iconVIew.layer.cornerRadius = iconVIew.frame.size.width * 0.5
-        visitCount.layer.cornerRadius = visitCount.frame.size.width * 0.5
+        visitCount.layer.cornerRadius = 10
+        visitCount.clipsToBounds = true
         
         let overlay = nativebrik.overlayViewController()
         self.addChild(overlay)
         self.view.addSubview(overlay.view)
 
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
+        visitCount.text = "aaa"
+        
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
         let window = windowScene?.windows.first
