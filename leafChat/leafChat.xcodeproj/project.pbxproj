@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		480F403C91F07A6E936C963C /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */; };
+		D20637662B58228D0094C0A8 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20637652B58228D0094C0A8 /* NewsFeedView.swift */; };
 		D22C0C5B2B47DE9A00D805AA /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */; };
 		D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5C2B47F04300D805AA /* QRScanner.swift */; };
 		D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5E2B4813CF00D805AA /* ChatView.swift */; };
@@ -36,6 +37,7 @@
 		62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leafChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF75878BA514366AF19BADF /* Pods-leafChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.debug.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.release.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.release.xcconfig"; sourceTree = "<group>"; };
+		D20637652B58228D0094C0A8 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
 		D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		D22C0C5C2B47F04300D805AA /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		D22C0C5E2B4813CF00D805AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D2F76FE42B4973C100CC09E6 /* AIChatViewController.swift */,
 				D2FD47DE2B4ACA5F00A9E2B6 /* .env */,
 				D2FD47E02B4ACBD200A9E2B6 /* LoadEnv.swift */,
+				D20637652B58228D0094C0A8 /* NewsFeedView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				D29F92BC2B42BFA6007916F5 /* ChatViewController.swift in Sources */,
 				D2F76FE32B4965A100CC09E6 /* ViewController.swift in Sources */,
 				D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */,
+				D20637662B58228D0094C0A8 /* NewsFeedView.swift in Sources */,
 				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
 				D2FD47E12B4ACBD200A9E2B6 /* LoadEnv.swift in Sources */,
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,
