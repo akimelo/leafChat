@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         visitCount.text = variable.string(default: "foo")
         print("KARTE_variables")
         print(variable)
-        print(variable.string)
+//        print(variable.string)
         print(variable.string(default: "foo"))
         
         let scenes = UIApplication.shared.connectedScenes
