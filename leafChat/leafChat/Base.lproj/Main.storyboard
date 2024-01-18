@@ -421,6 +421,21 @@
             </objects>
             <point key="canvasLocation" x="1980" y="1395"/>
         </scene>
+        <!--News Feed View-->
+        <scene sceneID="pom-xd-qQP">
+            <objects>
+                <viewController id="zBk-ZV-f8B" customClass="NewsFeedView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayF-91-kzq">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Jof-0Y-pmv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1n-iN-we2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="2151"/>
+        </scene>
         <!--Scanner-->
         <scene sceneID="9ld-Wz-PoJ">
             <objects>
