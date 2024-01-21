@@ -32,4 +32,5 @@
 
 1. Open a terminal and git clone in any directory.
 2. Make .env file.
-3. Put GoogleService-Info.plist file and Karte-Info.plist file.
+3. Write PROJECT_ID_NATIVEBRIK='Your project ID'
+4. Put GoogleService-Info.plist file and Karte-Info.plist file.
