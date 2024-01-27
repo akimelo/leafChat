@@ -15,6 +15,9 @@ class NewsFeedView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let preferences = WKWebpagePreferences()
+        preferences.allowsContentJavaScript = true
 
         // Do any additional setup after loading the view.
         // make WKWebview
