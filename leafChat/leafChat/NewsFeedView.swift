@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import KarteCore
 
 class NewsFeedView: UIViewController {
     
@@ -30,6 +31,9 @@ class NewsFeedView: UIViewController {
 //            backButton
 //            // ,forwardButton
 //        ]
+        
+        // Set user script for collaboration in WebView
+        UserSync.setUserSyncScript(webView)
         
         // Generate url
         let url = URL(string: env.value("WKWEBVIEW_URL")!)!
