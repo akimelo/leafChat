@@ -49,8 +49,11 @@ class ViewController: UIViewController {
         visitCount.text = variable.string(default: "foo")
         print("KARTE_variables")
         print(variable)
+//        print(variable_remote_config_test)
 //        print(variable.string)
         print(variable.string(default: "foo"))
+//        print(variable_remote_config_test.string(default: "app_remote_config"))
+//        print(variable_remote_config_test.array)                
         
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
