@@ -7,6 +7,7 @@
 
 import UIKit
 import KarteCore
+import KarteVariables
 
 class AIChatViewController: UIViewController {
 
@@ -28,6 +29,38 @@ class AIChatViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         moveAnimation()
+        
+        let variable_remote_config_test = Variables.variable(forKey: "app_top_krt_image_url")
+        let url_string = variable_remote_config_test.string(default: "app_remote_config")
+        
+        // UIImageViewインスタンスの作成
+        let bannerImageView = UIImageView()
+        bannerImageView.contentMode = .scaleAspectFit // 画像のアスペクト比を保ちつつfitさせる
+        bannerImageView.translatesAutoresizingMaskIntoConstraints = false // Auto Layoutを使用するためfalseに設定
+        
+        // ImageViewをViewに追加
+        self.view.addSubview(bannerImageView)
+        
+        // Auto Layoutの制約を設定（上部・左右・高さ）
+        NSLayoutConstraint.activate([
+            bannerImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            bannerImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            bannerImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            bannerImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.25) // 画面高の25%をバナーの高さに設定
+        ])
+        
+        // 画像のURL
+        if let imageUrl = URL(string: url_string) {
+            // URLから画像を非同期でダウンロード
+            URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                if let data = data, error == nil {
+                    DispatchQueue.main.async { // メインスレッドでUIの更新を行う
+                        bannerImageView.image = UIImage(data: data)
+                    }
+                }
+            }.resume() // URLSessionタスクを開始する
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
