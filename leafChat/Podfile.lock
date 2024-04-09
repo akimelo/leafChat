@@ -966,7 +966,7 @@ PODS:
     - nanopb/encode (= 2.30909.1)
   - nanopb/decode (2.30909.1)
   - nanopb/encode (2.30909.1)
-  - Nativebrik (0.3.2):
+  - Nativebrik (0.5.6):
     - YogaKit (~> 2.0.0)
   - PromisesObjC (2.3.1)
   - RecaptchaInterop (100.0.0)
@@ -1116,7 +1116,7 @@ SPEC CHECKSUMS:
   KarteVisualTracking: 95208695e37b1338d27819da210292efe193c263
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
-  Nativebrik: efc0af0a67307f4a9b79a9d6bb05a61d837b87b6
+  Nativebrik: 4a2a742acb76c8f32b18e24e7d69869e254ecbb9
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a

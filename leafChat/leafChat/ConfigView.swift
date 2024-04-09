@@ -1,19 +1,17 @@
 //
-//  AIChatViewController.swift
+//  ConfigView.swift
 //  leafChat
 //
-//  Created by Akihiro Nakano on 2024/01/06.
+//  Created by Akihiro Nakano on 2024/04/09.
 //
 
 import UIKit
 import KarteCore
 import KarteVariables
 
-class AIChatViewController: UIViewController {
-
-    @IBOutlet weak var leafChatIcon: UIImageView!
+class ConfigView: UIViewController {
     
-    var animateMoveUpFlug: Bool = false
+    @IBOutlet weak var count_label: UILabel!
     
     // タップされた際に遷移するURLを保持するプロパティ
     var destinationURL: URL?
@@ -40,20 +38,21 @@ class AIChatViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        Variables.fetch()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        moveAnimation()
         
-        let uiview = nativebrik
-            .experiment
-            .embeddingUIView("TEST_2")
-        uiview.frame = CGRect(x: 60, y: 480, width: UIScreen.main.bounds.width - 120, height: 70)
-        self.view.addSubview(uiview)
+    // -----[remote-config] count-----
+        let variable_count = Variables.variable(forKey: "aki_count")
+        let count_string = variable_count.string(default: "count")
         
+        count_label.text = count_string
+        
+    // -----[remote-config] Banner1-----
         let variable_image_url = Variables.variable(forKey: "app_top_krt_image_url")
         let image_url_string = variable_image_url.string(default: "url_string")
         
@@ -68,7 +67,7 @@ class AIChatViewController: UIViewController {
         
         let variable_text_color = Variables.variable(forKey: "app_top_krt_text_color")
         let text_color = variable_text_color.string(default: "text_color")
-        print(text_color)
+        
         // 遷移するURLを設定
         destinationURL = URL(string: link_url_string)
         
@@ -83,7 +82,6 @@ class AIChatViewController: UIViewController {
         bannerLabel.text = label_text
         bannerLabel.textAlignment = .center
         bannerLabel.translatesAutoresizingMaskIntoConstraints = false
-//        bannerLabel.font = UIFont.systemFont(ofSize: 30)
         bannerLabel.font = UIFont.boldSystemFont(ofSize: 30)
         bannerLabel.textColor = colorWithHexString(hexString: text_color)
         bannerImageView.addSubview(bannerLabel)
@@ -129,6 +127,9 @@ class AIChatViewController: UIViewController {
                 }
             }.resume() // URLSessionタスクを開始する
         }
+        
+    // -----[remote-config] Banner2-----
+        
     }
     
     @objc func bannerTapped() {
@@ -140,27 +141,7 @@ class AIChatViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Tracker.view("chat_ai", title: "AIチャット")
-//        print("KARTE_chat_ai")
-    }
-    
-    func moveAnimation() {
-        var animator: UIViewPropertyAnimator
-        if animateMoveUpFlug {
-            animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear, animations: {
-               self.leafChatIcon.center.y -= 50
-           })
-        } else {
-            animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear, animations: {
-                self.leafChatIcon.center.y += 50
-            })
-        }
-        animator.startAnimation()
-        //完了時に再帰呼び出しを行う
-        animator.addCompletion{_ in
-            self.animateMoveUpFlug.toggle()
-            self.moveAnimation()
-        }
+        Tracker.view("config", title: "設定値配信用ページ")
     }
 
     /*

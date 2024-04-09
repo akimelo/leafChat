@@ -12,6 +12,7 @@
 		D22C0C5B2B47DE9A00D805AA /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */; };
 		D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5C2B47F04300D805AA /* QRScanner.swift */; };
 		D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5E2B4813CF00D805AA /* ChatView.swift */; };
+		D24047A72BC4C31E002B08C3 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24047A62BC4C31E002B08C3 /* ConfigView.swift */; };
 		D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */; };
 		D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */; };
 		D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1932B44423900A67C4E /* AuthHelper.swift */; };
@@ -41,6 +42,7 @@
 		D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		D22C0C5C2B47F04300D805AA /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		D22C0C5E2B4813CF00D805AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		D24047A62BC4C31E002B08C3 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1932B44423900A67C4E /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				D2FD47DE2B4ACA5F00A9E2B6 /* .env */,
 				D2FD47E02B4ACBD200A9E2B6 /* LoadEnv.swift */,
 				D20637652B58228D0094C0A8 /* NewsFeedView.swift */,
+				D24047A62BC4C31E002B08C3 /* ConfigView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,
 				D29F92B82B42BFA6007916F5 /* AppDelegate.swift in Sources */,
 				D29F92BA2B42BFA6007916F5 /* SceneDelegate.swift in Sources */,
+				D24047A72BC4C31E002B08C3 /* ConfigView.swift in Sources */,
 				D242B1962B44473700A67C4E /* CreateAccountView.swift in Sources */,
 				D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */,
 				D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */,
