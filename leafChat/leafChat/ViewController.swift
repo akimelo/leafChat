@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         let variable = Variables.variable(forKey: "aki_test")
         
-        let overlay = nativebrik.overlayViewController()
+        let overlay = nativebrik.experiment.overlayViewController()
         self.addChild(overlay)
         self.view.addSubview(overlay.view)
 
