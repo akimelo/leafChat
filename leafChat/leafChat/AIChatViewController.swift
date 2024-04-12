@@ -68,7 +68,7 @@ class AIChatViewController: UIViewController {
         
         let variable_text_color = Variables.variable(forKey: "app_top_krt_text_color")
         let text_color = variable_text_color.string(default: "text_color")
-        print(text_color)
+        
         // 遷移するURLを設定
         destinationURL = URL(string: link_url_string)
         

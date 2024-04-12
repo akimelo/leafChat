@@ -14,7 +14,8 @@ class ConfigView: UIViewController {
     @IBOutlet weak var count_label: UILabel!
     
     // タップされた際に遷移するURLを保持するプロパティ
-    var destinationURL: URL?
+    var destinationURL1: URL?
+    var destinationURL2: URL?
     
     // カラーコードをUIColorに変換する関数
     func colorWithHexString(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
@@ -53,88 +54,124 @@ class ConfigView: UIViewController {
         count_label.text = count_string
         
     // -----[remote-config] Banner1-----
-        let variable_image_url = Variables.variable(forKey: "app_top_krt_image_url")
-        let image_url_string = variable_image_url.string(default: "url_string")
+        let variable_image_url_banner1 = Variables.variable(forKey: "home_top_krt_image_url")
+        let image_url_string_banner1 = variable_image_url_banner1.string(default: "url_string")
         
-        let variable_label_text = Variables.variable(forKey: "app_top_krt_label_text")
-        let label_text = variable_label_text.string(default: "label_text")
-        
-        let variable_button_text = Variables.variable(forKey: "app_top_krt_button_text")
-        let button_text = variable_button_text.string(default: "button_text")
-        
-        let variable_link_url = Variables.variable(forKey: "app_top_krt_link_url")
-        let link_url_string = variable_link_url.string(default: "link_url")
-        
-        let variable_text_color = Variables.variable(forKey: "app_top_krt_text_color")
-        let text_color = variable_text_color.string(default: "text_color")
+        let variable_link_url_banner1 = Variables.variable(forKey: "home_top_krt_link_url")
+        let link_url_string_banner1 = variable_link_url_banner1.string(default: "link_url")
         
         // 遷移するURLを設定
-        destinationURL = URL(string: link_url_string)
+        // destinationURL1 = URL(string: link_url_string_banner1)
         
         // UIImageViewインスタンスの作成
-        let bannerImageView = UIImageView()
-        bannerImageView.contentMode = .scaleAspectFit // 画像のアスペクト比を保ちつつfitさせる
-        bannerImageView.translatesAutoresizingMaskIntoConstraints = false
-        bannerImageView.isUserInteractionEnabled = true // ユーザーのタップを有効にする
-        self.view.addSubview(bannerImageView)
-        
-        let bannerLabel = UILabel()
-        bannerLabel.text = label_text
-        bannerLabel.textAlignment = .center
-        bannerLabel.translatesAutoresizingMaskIntoConstraints = false
-        bannerLabel.font = UIFont.boldSystemFont(ofSize: 30)
-        bannerLabel.textColor = colorWithHexString(hexString: text_color)
-        bannerImageView.addSubview(bannerLabel)
-        
-        // UIButtonインスタンスの作成
-        let button = UIButton(type: .system)
-        button.setTitle(button_text, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.contentHorizontalAlignment = .left
-        button.setTitleColor(colorWithHexString(hexString: text_color), for: .normal)
-        bannerImageView.addSubview(button) // UIImageView内に追加
-        
-        // タップジェスチャーの追加
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bannerTapped))
-        bannerImageView.addGestureRecognizer(tapGesture)
+        let bannerImageView1 = UIImageView()
+        bannerImageView1.contentMode = .scaleAspectFit // 画像のアスペクト比を保ちつつfitさせる
+        bannerImageView1.translatesAutoresizingMaskIntoConstraints = false
+        bannerImageView1.isUserInteractionEnabled = true // ユーザーのタップを有効にする
+        self.view.addSubview(bannerImageView1)
         
         // Auto Layoutの制約を設定
         NSLayoutConstraint.activate([
             // ImageViewの制約
-            bannerImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            bannerImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            bannerImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            bannerImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.25), // 画面高の25%をバナーの高さに設定
-            
-            // Labelの制約
-            bannerLabel.centerXAnchor.constraint(equalTo: bannerImageView.centerXAnchor),
-            bannerLabel.centerYAnchor.constraint(equalTo: bannerImageView.centerYAnchor),
-            
-            // Buttonの制約
-            button.leadingAnchor.constraint(equalTo: bannerImageView.leadingAnchor, constant: 20), // バナーの左から20ポイントの位置
-            button.bottomAnchor.constraint(equalTo: bannerImageView.bottomAnchor, constant: -50), // バナーの下から10ポイントの位置
-            button.heightAnchor.constraint(equalToConstant: 44) // 高さ44ポイント
+            bannerImageView1.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            bannerImageView1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            bannerImageView1.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            bannerImageView1.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.70), // 画面高の70%をバナーの高さに設定
         ])
         
         // 画像のURL
-        if let imageUrl = URL(string: image_url_string) {
+        if let imageUrl_banner1 = URL(string: image_url_string_banner1) {
             // URLから画像を非同期でダウンロード
-            URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+            URLSession.shared.dataTask(with: imageUrl_banner1) { data, response, error in
                 if let data = data, error == nil {
                     DispatchQueue.main.async { // メインスレッドでUIの更新を行う
-                        bannerImageView.image = UIImage(data: data)
+                        bannerImageView1.image = UIImage(data: data)
                     }
                 }
             }.resume() // URLSessionタスクを開始する
         }
         
     // -----[remote-config] Banner2-----
+        let variable_image_url_banner2 = Variables.variable(forKey: "app_top_krt_image_url")
+        let image_url_string_banner2 = variable_image_url_banner2.string(default: "url_string")
+        
+        let variable_label_text_banner2 = Variables.variable(forKey: "app_top_krt_label_text")
+        let label_text_banner2 = variable_label_text_banner2.string(default: "label_text")
+        
+        let variable_button_text_banner2 = Variables.variable(forKey: "app_top_krt_button_text")
+        let button_text_banner2 = variable_button_text_banner2.string(default: "button_text")
+        
+        let variable_link_url_banner2 = Variables.variable(forKey: "app_top_krt_link_url")
+        let link_url_string_banner2 = variable_link_url_banner2.string(default: "link_url")
+        
+        let variable_text_color_banner2 = Variables.variable(forKey: "app_top_krt_text_color")
+        let text_color_banner2 = variable_text_color_banner2.string(default: "text_color")
+        
+        // 遷移するURLを設定
+        destinationURL2 = URL(string: link_url_string_banner2)
+        
+        // UIImageViewインスタンスの作成
+        let bannerImageView2 = UIImageView()
+        bannerImageView2.contentMode = .scaleAspectFit // 画像のアスペクト比を保ちつつfitさせる
+        bannerImageView2.translatesAutoresizingMaskIntoConstraints = false
+        bannerImageView2.isUserInteractionEnabled = true // ユーザーのタップを有効にする
+        self.view.addSubview(bannerImageView2)
+        
+        let bannerLabel2 = UILabel()
+        bannerLabel2.text = label_text_banner2
+        bannerLabel2.textAlignment = .center
+        bannerLabel2.translatesAutoresizingMaskIntoConstraints = false
+        bannerLabel2.font = UIFont.boldSystemFont(ofSize: 30)
+        bannerLabel2.textColor = colorWithHexString(hexString: text_color_banner2)
+        bannerImageView2.addSubview(bannerLabel2)
+        
+        // UIButtonインスタンスの作成
+        let button2 = UIButton(type: .system)
+        button2.setTitle(button_text_banner2, for: .normal)
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        button2.contentHorizontalAlignment = .left
+        button2.setTitleColor(colorWithHexString(hexString: text_color_banner2), for: .normal)
+        bannerImageView2.addSubview(button2) // UIImageView内に追加
+        
+        // タップジェスチャーの追加
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bannerTapped))
+        bannerImageView2.addGestureRecognizer(tapGesture)
+        
+        // Auto Layoutの制約を設定
+        NSLayoutConstraint.activate([
+            // ImageViewの制約
+            bannerImageView2.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            bannerImageView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            bannerImageView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            bannerImageView2.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.25), // 画面高の25%をバナーの高さに設定
+            
+            // Labelの制約
+            bannerLabel2.centerXAnchor.constraint(equalTo: bannerImageView2.centerXAnchor),
+            bannerLabel2.centerYAnchor.constraint(equalTo: bannerImageView2.centerYAnchor),
+            
+            // Buttonの制約
+            button2.leadingAnchor.constraint(equalTo: bannerImageView2.leadingAnchor, constant: 20), // バナーの左から20ポイントの位置
+            button2.bottomAnchor.constraint(equalTo: bannerImageView2.bottomAnchor, constant: -50), // バナーの下から10ポイントの位置
+            button2.heightAnchor.constraint(equalToConstant: 44) // 高さ44ポイント
+        ])
+        
+        // 画像のURL
+        if let imageUrl_banner2 = URL(string: image_url_string_banner2) {
+            // URLから画像を非同期でダウンロード
+            URLSession.shared.dataTask(with: imageUrl_banner2) { data, response, error in
+                if let data = data, error == nil {
+                    DispatchQueue.main.async { // メインスレッドでUIの更新を行う
+                        bannerImageView2.image = UIImage(data: data)
+                    }
+                }
+            }.resume() // URLSessionタスクを開始する
+        }
         
     }
     
     @objc func bannerTapped() {
         // 定義したURLを開く
-        if let url = destinationURL {
+        if let url = destinationURL2 {
             UIApplication.shared.open(url)
         }
     }
