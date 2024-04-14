@@ -929,7 +929,7 @@
         <!--SmallCarousel-->
         <scene sceneID="N5f-1D-UbU">
             <objects>
-                <viewController id="Lvj-yp-bV1" sceneMemberID="viewController">
+                <viewController id="Lvj-yp-bV1" customClass="SmallCarouselView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ews-Pe-EGI">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
