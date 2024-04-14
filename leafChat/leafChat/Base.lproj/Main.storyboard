@@ -509,7 +509,7 @@
         <!--BannerString-->
         <scene sceneID="GCT-jD-Mbj">
             <objects>
-                <viewController id="1S3-7S-PbK" sceneMemberID="viewController">
+                <viewController id="1S3-7S-PbK" customClass="BannerStringView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q1q-DQ-jT1">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
