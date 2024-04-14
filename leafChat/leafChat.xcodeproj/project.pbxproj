@@ -15,6 +15,7 @@
 		D24047A72BC4C31E002B08C3 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24047A62BC4C31E002B08C3 /* ConfigView.swift */; };
 		D24047A92BCBA9B4002B08C3 /* BannerStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24047A82BCBA9B4002B08C3 /* BannerStringView.swift */; };
 		D24047AB2BCBAFA1002B08C3 /* BigCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24047AA2BCBAFA1002B08C3 /* BigCarouselView.swift */; };
+		D24047AD2BCC9756002B08C3 /* SmallCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24047AC2BCC9756002B08C3 /* SmallCarouselView.swift */; };
 		D242B1902B42E1CD00A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */; };
 		D242B1922B42E1E400A67C4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */; };
 		D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242B1932B44423900A67C4E /* AuthHelper.swift */; };
@@ -47,6 +48,7 @@
 		D24047A62BC4C31E002B08C3 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		D24047A82BCBA9B4002B08C3 /* BannerStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerStringView.swift; sourceTree = "<group>"; };
 		D24047AA2BCBAFA1002B08C3 /* BigCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCarouselView.swift; sourceTree = "<group>"; };
+		D24047AC2BCC9756002B08C3 /* SmallCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCarouselView.swift; sourceTree = "<group>"; };
 		D242B18F2B42E1CD00A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1912B42E1E400A67C4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D242B1932B44423900A67C4E /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D24047A62BC4C31E002B08C3 /* ConfigView.swift */,
 				D24047A82BCBA9B4002B08C3 /* BannerStringView.swift */,
 				D24047AA2BCBAFA1002B08C3 /* BigCarouselView.swift */,
+				D24047AC2BCC9756002B08C3 /* SmallCarouselView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				D2F76FE32B4965A100CC09E6 /* ViewController.swift in Sources */,
 				D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */,
 				D20637662B58228D0094C0A8 /* NewsFeedView.swift in Sources */,
+				D24047AD2BCC9756002B08C3 /* SmallCarouselView.swift in Sources */,
 				D242B1942B44423900A67C4E /* AuthHelper.swift in Sources */,
 				D2FD47E12B4ACBD200A9E2B6 /* LoadEnv.swift in Sources */,
 				D242B19A2B45625500A67C4E /* DatabaseHelper.swift in Sources */,

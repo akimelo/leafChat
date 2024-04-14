@@ -936,7 +936,7 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.3.0)
-  - KarteCore (2.24.1):
+  - KarteCore (2.26.0):
     - KarteUtilities (~> 3.8)
   - KarteCrashReporter (1.11.0)
   - KarteCrashReporting (2.7.1):
@@ -951,12 +951,12 @@ PODS:
   - KarteRemoteNotification (2.11.0):
     - KarteCore (~> 2.0)
     - KarteUtilities (~> 3.8)
-  - KarteUtilities (3.10.1):
-    - KarteUtilities/standard (= 3.10.1)
-  - KarteUtilities/standard (3.10.1)
-  - KarteVariables (2.7.1):
+  - KarteUtilities (3.12.0):
+    - KarteUtilities/standard (= 3.12.0)
+  - KarteUtilities/standard (3.12.0)
+  - KarteVariables (2.8.0):
     - KarteCore (~> 2.22)
-    - KarteUtilities (~> 3.5)
+    - KarteUtilities (~> 3.12)
   - KarteVisualTracking (2.12.0):
     - KarteCore (~> 2.22)
     - KarteUtilities (~> 3.8)
@@ -1105,14 +1105,14 @@ SPEC CHECKSUMS:
   gRPC-Core: a21a60aefc08c68c247b439a9ef97174b0c54f96
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
-  KarteCore: 04b2e51ec1a695113b58f03c87ddd155dd3f10e0
+  KarteCore: 10edb129ca7474b37d3caeeaef8f8161d3f2d88f
   KarteCrashReporter: b5cac8912888404eba60d08a21de42a591b080bc
   KarteCrashReporting: 114fb565877d7565574ba4eef2fcdeafac98bc7d
   KarteInAppMessaging: 448cd88c42ff976efbc76ed75b31b72a6fce8e6d
   KarteInbox: 62c731059f5fcc64c4c7c16a911b1147c5af69d8
   KarteRemoteNotification: c3618f473e56d21f48d3b85ac31414452e2cb953
-  KarteUtilities: 36833353e1c1fc62dd85cc3de41a38eab01a9c9e
-  KarteVariables: 10cb966503acb6f9e3953fc2244f1d7652d59bb5
+  KarteUtilities: 2683d3589dd9fa860d87bec69447d188174f21b3
+  KarteVariables: b2b7ba70aa1a134ca821f4e2a6a2870ef835e0d6
   KarteVisualTracking: 95208695e37b1338d27819da210292efe193c263
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
@@ -1123,6 +1123,6 @@ SPEC CHECKSUMS:
   Yoga: 7ac7f65e2d7120bf97e75fd66436ed4c7bf8e37e
   YogaKit: 4751ba673fab49df29e2235e23c4ea7d6d5a339c
 
-PODFILE CHECKSUM: 8665010ef239a9a85f107e29f3154c7259ed0277
+PODFILE CHECKSUM: 456459d29005e6f706e05227339b45fe6efba3ec
 
 COCOAPODS: 1.13.0
