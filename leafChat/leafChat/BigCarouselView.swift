@@ -13,13 +13,8 @@ class BigCarouselView: UIViewController, UIScrollViewDelegate {
     
     var scrollView: UIScrollView!
     var pageControl: UIPageControl!
-    var imageUrls: [URL] = [
-            URL(string: "https://img-cf.karte.io/image/660d1c2055febb4bdfe148d9::Frame%203670.png")!,
-            URL(string: "https://img-cf.karte.io/image/660d1c2955febb4bdfe14908::Frame%203671.png")!,
-            URL(string: "https://img-cf.karte.io/image/660d1c3055febb4bdfe1492b::Frame%203672.png")!
-        ]
-    var links: [String] = ["https://example.com", "https://example.com", "https://example.com"] // リンク先のURL文字列の配列
-    
+    var imageUrls: [URL] = [] // URL配列の宣言だけする
+    var links: [String] = [] // リンク先のURL文字列の配列を宣言だけする
     let carouselHeight: CGFloat = 200 // カルーセルの高さを設定
     
     override func loadView() {
@@ -37,9 +32,35 @@ class BigCarouselView: UIViewController, UIScrollViewDelegate {
         let keys = Variables.getAllKeys()
         print(keys)
         
-        let variable_contents_carousel = Variables.variable(forKey: "account_top_contents")
-        let contents_string_carousel = variable_contents_carousel.string(default: "contents")
-        print(contents_string_carousel)
+        let variable_image_url_0_carousel = Variables.variable(forKey: "account_top_krt_image_url_0")
+        let image_url_0_string_carousel = variable_image_url_0_carousel.string(default: "image_url_0_string")
+        
+        let variable_image_url_1_carousel = Variables.variable(forKey: "account_top_krt_image_url_1")
+        let image_url_1_string_carousel = variable_image_url_1_carousel.string(default: "image_url_1_string")
+        
+        let variable_image_url_2_carousel = Variables.variable(forKey: "account_top_krt_image_url_2")
+        let image_url_2_string_carousel = variable_image_url_2_carousel.string(default: "image_url_2_string")
+        
+        let variable_link_url_0_carousel = Variables.variable(forKey: "account_top_krt_link_url_0")
+        let link_url_0_string_carousel = variable_link_url_0_carousel.string(default: "link_url_0_string")
+        
+        let variable_link_url_1_carousel = Variables.variable(forKey: "account_top_krt_link_url_1")
+        let link_url_1_string_carousel = variable_link_url_1_carousel.string(default: "link_url_1_string")
+        
+        let variable_link_url_2_carousel = Variables.variable(forKey: "account_top_krt_link_url_2")
+        let link_url_2_string_carousel = variable_link_url_2_carousel.string(default: "link_url_2_string")
+        
+        // imageUrlsとlinksにfetchした値を代入
+        imageUrls = [
+            URL(string: image_url_0_string_carousel)!,
+            URL(string: image_url_1_string_carousel)!,
+            URL(string: image_url_2_string_carousel)!
+        ]
+        links = [
+            link_url_0_string_carousel,
+            link_url_1_string_carousel,
+            link_url_2_string_carousel
+        ]
         
         // UIScrollViewのインスタンス作成
         scrollView = UIScrollView(frame: CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.width, height: carouselHeight))
