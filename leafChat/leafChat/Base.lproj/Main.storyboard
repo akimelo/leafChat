@@ -933,14 +933,51 @@
                     <view key="view" contentMode="scaleToFill" id="ews-Pe-EGI">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuv-ys-IwO">
+                                <rect key="frame" x="20" y="828" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AAZ-QO-9Od"/>
+                                    <constraint firstAttribute="width" constant="80" id="DB7-uj-7Jw"/>
+                                </constraints>
+                                <color key="tintColor" red="0.31121851569999998" green="0.70597893720000005" blue="0.69275739869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="config">
+                                    <color key="baseBackgroundColor" red="0.27876138220000002" green="0.63235204330000006" blue="0.62050938560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="i83-gc-UAn" kind="show" id="Gns-VE-H4x"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HyS-mG-mtd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cuv-ys-IwO" firstAttribute="leading" secondItem="HyS-mG-mtd" secondAttribute="leading" constant="20" id="GA7-mE-p6p"/>
+                            <constraint firstItem="HyS-mG-mtd" firstAttribute="bottom" secondItem="cuv-ys-IwO" secondAttribute="bottom" constant="20" id="HXT-0f-Oin"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SmallCarousel" id="qPc-ep-IF2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2X-VO-i74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6001" y="1588"/>
+        </scene>
+        <!--iCorousel-->
+        <scene sceneID="foX-7F-tkN">
+            <objects>
+                <viewController id="i83-gc-UAn" customClass="iCorouselView" customModule="leafChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udc-8v-3zH">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1jF-Uc-DLg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iCorousel" id="iI9-bh-gbk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I28-St-IvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7070" y="1588"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -957,13 +994,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
