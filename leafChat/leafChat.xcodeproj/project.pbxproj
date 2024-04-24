@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		480F403C91F07A6E936C963C /* Pods_leafChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E214ABBC1DE74F7345F90D /* Pods_leafChat.framework */; };
 		D20637662B58228D0094C0A8 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20637652B58228D0094C0A8 /* NewsFeedView.swift */; };
+		D228840B2BD794C000BC1EC9 /* iCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228840A2BD794C000BC1EC9 /* iCorouselView.swift */; };
 		D22C0C5B2B47DE9A00D805AA /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */; };
 		D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5C2B47F04300D805AA /* QRScanner.swift */; };
 		D22C0C5F2B4813CF00D805AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C0C5E2B4813CF00D805AA /* ChatView.swift */; };
@@ -42,6 +43,7 @@
 		CAF75878BA514366AF19BADF /* Pods-leafChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.debug.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE7FB5A0AF0B8A80C8777CB /* Pods-leafChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leafChat.release.xcconfig"; path = "Target Support Files/Pods-leafChat/Pods-leafChat.release.xcconfig"; sourceTree = "<group>"; };
 		D20637652B58228D0094C0A8 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		D228840A2BD794C000BC1EC9 /* iCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCorouselView.swift; sourceTree = "<group>"; };
 		D22C0C5A2B47DE9A00D805AA /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		D22C0C5C2B47F04300D805AA /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		D22C0C5E2B4813CF00D805AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D24047A82BCBA9B4002B08C3 /* BannerStringView.swift */,
 				D24047AA2BCBAFA1002B08C3 /* BigCarouselView.swift */,
 				D24047AC2BCC9756002B08C3 /* SmallCarouselView.swift */,
+				D228840A2BD794C000BC1EC9 /* iCorouselView.swift */,
 			);
 			path = leafChat;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				D242B1962B44473700A67C4E /* CreateAccountView.swift in Sources */,
 				D2F76FE52B4973C100CC09E6 /* AIChatViewController.swift in Sources */,
 				D24047A92BCBA9B4002B08C3 /* BannerStringView.swift in Sources */,
+				D228840B2BD794C000BC1EC9 /* iCorouselView.swift in Sources */,
 				D22C0C5D2B47F04300D805AA /* QRScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
