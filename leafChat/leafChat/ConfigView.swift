@@ -13,6 +13,9 @@ class ConfigView: UIViewController {
     
     @IBOutlet weak var count_label: UILabel!
     
+    var imgVar: Variable?
+    var linkVar: Variable?
+    
     // タップされた際に遷移するURLを保持するプロパティ
     var destinationURL: URL?
     
@@ -36,8 +39,12 @@ class ConfigView: UIViewController {
         let variable_image_url_banner = Variables.variable(forKey: "home_top_krt_image_url")
         let image_url_string_banner = variable_image_url_banner.string(default: "url_string")
         
+        imgVar = variable_image_url_banner
+        
         let variable_link_url_banner = Variables.variable(forKey: "home_top_krt_link_url")
         let link_url_string_banner = variable_link_url_banner.string(default: "link_url")
+        
+        linkVar = variable_link_url_banner
         
         // 遷移するURLを設定
         destinationURL = URL(string: link_url_string_banner)
@@ -48,6 +55,9 @@ class ConfigView: UIViewController {
         bannerImageView.translatesAutoresizingMaskIntoConstraints = false
         bannerImageView.isUserInteractionEnabled = true // ユーザーのタップを有効にする
         self.view.addSubview(bannerImageView)
+        
+        // バナーが表示されたタイミングで、下記処理を実行
+        Tracker.trackOpen(variables: [variable_image_url_banner, variable_link_url_banner])
         
         // タップジェスチャーの追加
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bannerTapped))
@@ -76,8 +86,17 @@ class ConfigView: UIViewController {
     }
     
     @objc func bannerTapped() {
+        
+        guard let imgVar = imgVar else {
+            return
+        }
+        guard let linkVar = linkVar else {
+            return
+        }
         // 定義したURLを開く
         if let url = destinationURL {
+            // バナーがクリックされたタイミングで、下記処理を実行
+            Tracker.trackClick(variables: [imgVar, linkVar])
             UIApplication.shared.open(url)
         }
     }
