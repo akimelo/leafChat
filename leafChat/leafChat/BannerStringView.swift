@@ -11,6 +11,10 @@ import KarteVariables
 
 class BannerStringView: UIViewController {
     
+    // バナーの画像URL, 遷移先URLを格納する変数
+    var imgVar: Variable?
+    var linkVar: Variable?
+    
     // タップされた際に遷移するURLを保持するプロパティ
     var destinationURL: URL?
     
@@ -48,6 +52,8 @@ class BannerStringView: UIViewController {
         let variable_image_url_banner = Variables.variable(forKey: "app_top_krt_image_url")
         let image_url_string_banner = variable_image_url_banner.string(default: "url_string")
         
+        imgVar = variable_image_url_banner
+        
         let variable_label_text_banner = Variables.variable(forKey: "app_top_krt_label_text")
         let label_text_banner = variable_label_text_banner.string(default: "label_text")
         
@@ -56,6 +62,8 @@ class BannerStringView: UIViewController {
         
         let variable_link_url_banner = Variables.variable(forKey: "app_top_krt_link_url")
         let link_url_string_banner = variable_link_url_banner.string(default: "link_url")
+        
+        linkVar = variable_link_url_banner
         
         let variable_text_color_banner = Variables.variable(forKey: "app_top_krt_text_color")
         let text_color_banner = variable_text_color_banner.string(default: "text_color")
@@ -69,6 +77,9 @@ class BannerStringView: UIViewController {
         bannerImageView.translatesAutoresizingMaskIntoConstraints = false
         bannerImageView.isUserInteractionEnabled = true // ユーザーのタップを有効にする
         self.view.addSubview(bannerImageView)
+        
+        // バナーが表示されたタイミングで、下記処理を実行
+        Tracker.trackOpen(variables: [variable_image_url_banner, variable_link_url_banner])
         
         let bannerLabel = UILabel()
         bannerLabel.text = label_text_banner
@@ -123,8 +134,17 @@ class BannerStringView: UIViewController {
     }
     
     @objc func bannerTapped() {
+        
+        guard let imgVar = imgVar else {
+            return
+        }
+        guard let linkVar = linkVar else {
+            return
+        }
         // 定義したURLを開く
         if let url = destinationURL {
+            // バナーがクリックされたタイミングで、下記処理を実行
+            Tracker.trackClick(variables: [imgVar, linkVar])
             UIApplication.shared.open(url)
         }
     }
